@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Layers Catalog Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "datasetIds": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "format": { "type": "string" },
+      "category": {
+        "type": "string",
+        "enum": ["Scientific", "Infrastructure", "Humanitarian", "Logistics", "Community"]
+      },
+      "confidence": {
+        "type": "string",
+        "enum": ["Verified", "Cross-Referenced", "Community Report", "Pending Verification"]
+      },
+      "refreshFrequency": {
+        "type": "string",
+        "enum": ["Real-time", "Hourly", "Daily", "Weekly", "Static"]
+      },
+      "enabled": {
+        "type": "boolean",
+        "default": true
+      },
+      "visualization": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "required": ["id", "name", "datasetIds", "category", "confidence", "enabled"]
+  }
+}

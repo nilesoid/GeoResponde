@@ -1,0 +1,221 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1782508092850,
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-06-23&minlatitude=0&maxlatitude=15&minlongitude=-75&maxlongitude=-59&minmagnitude=2.5",
+    "title": "USGS Recorded Aftershocks (Venezuela, Since June 23, 2026)",
+    "status": 200,
+    "api": "2.4.0",
+    "count": 5
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.4,
+        "place": "17 km WSW of Morón, Venezuela",
+        "time": 1782447570378,
+        "updated": 1782466835912,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8d1",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t8d1&format=geojson",
+        "felt": 2,
+        "cdi": 2,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 298,
+        "net": "us",
+        "code": "6000t8d1",
+        "ids": ",us6000t8d1,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 44,
+        "dmin": 2.731,
+        "rms": 1.47,
+        "gap": 132,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.4 - 17 km WSW of Morón, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.3607,
+          10.4537,
+          10
+        ]
+      },
+      "id": "us6000t8d1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.4,
+        "place": "5 km NE of Guatire, Venezuela",
+        "time": 1782366503136,
+        "updated": 1782428320148,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t81p",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t81p&format=geojson",
+        "felt": 14,
+        "cdi": 4.1,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 304,
+        "net": "us",
+        "code": "6000t81p",
+        "ids": ",us6000t81p,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 32,
+        "dmin": 4.379,
+        "rms": 0.67,
+        "gap": 114,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.4 - 5 km NE of Guatire, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.5057,
+          10.5111,
+          10
+        ]
+      },
+      "id": "us6000t81p"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.5,
+        "place": "13 km N of Caucagüito, Venezuela",
+        "time": 1782339834046,
+        "updated": 1782467382027,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t80d",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t80d&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 312,
+        "net": "us",
+        "code": "6000t80d",
+        "ids": ",us6000t80d,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 29,
+        "dmin": 4.225,
+        "rms": 0.43,
+        "gap": 141,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.5 - 13 km N of Caucagüito, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.7168,
+          10.6092,
+          10
+        ]
+      },
+      "id": "us6000t80d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 7.5,
+        "place": "28 km SE of Yumare, Venezuela",
+        "time": 1782338711566,
+        "updated": 1782506650274,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zp",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t7zp&format=geojson",
+        "felt": 551,
+        "cdi": 8.7,
+        "mmi": 9.046,
+        "alert": "red",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 2479,
+        "net": "us",
+        "code": "6000t7zp",
+        "ids": ",us6000t7zp,",
+        "sources": ",us,",
+        "types": ",dyfi,event-sequence,general-header,general-text,ground-failure,losspager,moment-tensor,oaf,origin,phase-data,shakemap,",
+        "nst": 97,
+        "dmin": 9.681,
+        "rms": 0.61,
+        "gap": 50,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 7.5 - 28 km SE of Yumare, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.4716,
+          10.4351,
+          10
+        ]
+      },
+      "id": "us6000t7zp"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 7.2,
+        "place": "23 km SE of Yumare, Venezuela",
+        "time": 1782338673389,
+        "updated": 1782482839004,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zc",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t7zc&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": 8.887,
+        "alert": "red",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 2000,
+        "net": "us",
+        "code": "6000t7zc",
+        "ids": ",atth5pbk,us6000t7zc,",
+        "sources": ",at,us,",
+        "types": ",event-sequence,general-header,general-text,ground-failure,internal-origin,losspager,moment-tensor,origin,phase-data,shakemap,",
+        "nst": 100,
+        "dmin": 2.587,
+        "rms": 0.6,
+        "gap": 21,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 7.2 - 23 km SE of Yumare, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.5277,
+          10.436,
+          20.294
+        ]
+      },
+      "id": "us6000t7zc"
+    }
+  ],
+  "bbox": [
+    -68.5277,
+    10.4351,
+    10,
+    -66.5057,
+    10.6092,
+    20.294
+  ]
+}

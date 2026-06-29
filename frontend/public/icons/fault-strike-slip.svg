@@ -1,0 +1,8 @@
+<svg width="24" height="12" viewBox="0 0 24 12" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top arrow pointing right -->
+  <line x1="2" y1="4" x2="22" y2="4" stroke="#f1c40f" stroke-width="2" />
+  <polyline points="18,1 22,4 18,4" fill="#f1c40f" />
+  <!-- Bottom arrow pointing left -->
+  <line x1="2" y1="8" x2="22" y2="8" stroke="#f1c40f" stroke-width="2" />
+  <polyline points="6,11 2,8 6,8" fill="#f1c40f" />
+</svg>

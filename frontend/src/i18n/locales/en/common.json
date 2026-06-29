@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "situation": "Situation",
+    "find": "Find",
+    "report": "Report"
+  },
+  "sidebar": {
+    "title": "GeoResponde",
+    "subtitle": "Venezuela Earthquake 2026",
+    "loading": "Loading catalog...",
+    "error": "Failed to load catalog.",
+    "situationLayers": "Situation Layers",
+    "externalResources": "External Resources",
+    "categories": {
+      "Earthquakes": "Earthquakes",
+      "Hazards": "Hazards",
+      "Satellite": "Satellite",
+      "Geology": "Geology",
+      "Infrastructure": "Infrastructure",
+      "Humanitarian": "Humanitarian",
+      "Logistics": "Logistics",
+      "Community": "Community"
+    },
+    "confidence": {
+      "Official": "Official",
+      "Community Verified": "Community Verified",
+      "Verified": "Verified",
+      "Pending Verification": "Pending Verification"
+    }
+  },
+  "find": {
+    "title": "Find People & Resources",
+    "subtitle": "Search across trusted humanitarian organizations simultaneously.",
+    "placeholder": "Search people, buildings, hospitals, shelters...",
+    "examples": "Quick examples:",
+    "button": "Search",
+    "buttonLoading": "Searching...",
+    "source": "Source",
+    "type": "Type",
+    "openResource": "Open Original Resource ↗",
+    "noResults": "No results found for \"{{query}}\". Try a different search term.",
+    "error": "Error searching providers"
+  },
+  "report": {
+    "title": "Report Information",
+    "subtitle": "Report missing persons, damaged buildings and emergency updates through trusted organizations.",
+    "missingPerson": "Missing Person",
+    "foundPerson": "Found Person",
+    "damagedBuilding": "Damaged Building",
+    "shelterUpdate": "Shelter Update",
+    "back": "← Back to Categories",
+    "redirectTitle": "Continue on the official reporting platform",
+    "redirectText": "To ensure data integrity and avoid fragmentation, GeoResponde does not store reports directly. We will redirect you to the authoritative organization's platform where your report will be properly handled and verified.",
+    "goToOfficial": "Go to Official Platform ↗"
+  }
+}

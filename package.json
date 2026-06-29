@@ -1,0 +1,36 @@
+{
+  "name": "georesponde",
+  "version": "0.2.0-alpha",
+  "private": true,
+  "description": "Open-source emergency geospatial platform",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @georesponde/frontend --filter @georesponde/backend run dev",
+    "dev:frontend": "pnpm --filter @georesponde/frontend run dev",
+    "dev:backend": "pnpm --filter @georesponde/backend run dev",
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm -r exec tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "catalog:build": "pnpm --filter @georesponde/catalog run build && node packages/catalog/dist/cli.js build",
+    "catalog:validate": "pnpm --filter @georesponde/catalog run build && node packages/catalog/dist/cli.js validate"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "axios": "^1.18.1",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.22.4",
+    "yaml": "^2.9.0"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.61.1",
+    "cheerio": "^1.2.0",
+    "playwright": "^1.61.1"
+  }
+}

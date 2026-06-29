@@ -1,0 +1,16 @@
+[
+  {
+    "id": "prov-venezuelatebusca",
+    "display_name": "Venezuela Te Busca",
+    "website": "https://venezuelatebusca.com/",
+    "description": "Platform for finding missing persons.",
+    "logo": "/logos/venezuelatebusca.png",
+    "status": "active",
+    "adapter": "VenezuelaTeBuscaAdapter",
+    "capabilities": [
+      "search",
+      "person_lookup",
+      "submission"
+    ]
+  }
+]

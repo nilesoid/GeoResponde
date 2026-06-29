@@ -1,0 +1,393 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1782505798560,
+    "url": "http://www.funvisis.gob.ve/maravilla.json",
+    "title": "FUNVISIS Local Earthquakes",
+    "status": 200,
+    "api": "1.0.0",
+    "count": 20
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "0e5c0719-2214-4bd9-8110-26be0e506409",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.64,
+          10.67,
+          4.1
+        ]
+      },
+      "properties": {
+        "mag": 2.8,
+        "place": "47 km al norte de Maracay",
+        "time": 1782503880000,
+        "depth": 4.1,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "6049a34f-4184-407a-8d11-67a0a91fc899",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.55,
+          10.43,
+          5
+        ]
+      },
+      "properties": {
+        "mag": 2.8,
+        "place": "23 km al noroeste de San Felipe",
+        "time": 1782503760000,
+        "depth": 5,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bf872d81-a8d3-4632-802a-005d66482cd6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.56,
+          10.43,
+          1
+        ]
+      },
+      "properties": {
+        "mag": 2.8,
+        "place": "22 km al noreste de San Felipe",
+        "time": 1782503460000,
+        "depth": 1,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "39fa4ad9-955f-4177-ac8b-d3cea799003d",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.63,
+          10.52,
+          5.6
+        ]
+      },
+      "properties": {
+        "mag": 2.7,
+        "place": "24 km al noreste de San Felipe ",
+        "time": 1782501900000,
+        "depth": 5.6,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "166f2655-3da9-4f60-a452-cb0e2079b853",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.47,
+          10.8,
+          3.6
+        ]
+      },
+      "properties": {
+        "mag": 3,
+        "place": "21 km al noroeste de Boca de Aroa",
+        "time": 1782500940000,
+        "depth": 3.6,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3794392e-b54d-4b4b-940e-c2c5e33a96b2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.39,
+          10.48,
+          10.6
+        ]
+      },
+      "properties": {
+        "mag": 3.2,
+        "place": "27 km al suroeste de Boca de Aroa",
+        "time": 1782499920000,
+        "depth": 10.6,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "df1b3db6-d16a-471c-a7bb-907e92c802ce",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.3,
+          10.49,
+          3.4
+        ]
+      },
+      "properties": {
+        "mag": 2.2,
+        "place": "28 km al norte de La Victoria",
+        "time": 1782499200000,
+        "depth": 3.4,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c5813c92-10c4-415f-8ab8-04fb81d7042b",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.67,
+          10.64,
+          1.8
+        ]
+      },
+      "properties": {
+        "mag": 2.4,
+        "place": "4 km al noroeste de Naiguata",
+        "time": 1782498960000,
+        "depth": 1.8,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "e9c7c021-3e3b-4247-8725-1fe6c426ab4d",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.79,
+          10.52,
+          5.7
+        ]
+      },
+      "properties": {
+        "mag": 2.3,
+        "place": "13 km al suroeste de Naiguata",
+        "time": 1782498600000,
+        "depth": 5.7,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "4be38b37-d29a-4a66-bbcd-b3c53852401e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.79,
+          10.56,
+          4.6
+        ]
+      },
+      "properties": {
+        "mag": 2.2,
+        "place": "9 km al suroeste de Naiguata",
+        "time": 1782497880000,
+        "depth": 4.6,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "f6b5a513-bd3f-4d17-9b15-9b6b11d9a81f",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.11,
+          10.59,
+          5.4
+        ]
+      },
+      "properties": {
+        "mag": 2.2,
+        "place": "21 km al oeste de La Guaira",
+        "time": 1782496020000,
+        "depth": 5.4,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "abe88c63-d124-4105-a0ff-50d54daed1c5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.81,
+          9.24,
+          29.3
+        ]
+      },
+      "properties": {
+        "mag": 2.2,
+        "place": "52 km al suroeste de San Carlos",
+        "time": 1782494880000,
+        "depth": 29.3,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ffbf1816-642e-4e44-ab34-43e038527bd4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.27,
+          10.6,
+          4.9
+        ]
+      },
+      "properties": {
+        "mag": 2.3,
+        "place": "38 km al oeste de La Guaira",
+        "time": 1782494100000,
+        "depth": 4.9,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "c100160a-eaee-49db-826b-37afec18c04e",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.77,
+          10.51,
+          7.9
+        ]
+      },
+      "properties": {
+        "mag": 2.7,
+        "place": "13 km al suroeste de Naiguata",
+        "time": 1782493320000,
+        "depth": 7.9,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ad312887-5a82-4daf-a50c-76016ecabaef",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.5,
+          10.57,
+          6.9
+        ]
+      },
+      "properties": {
+        "mag": 3.1,
+        "place": "27 km al suroeste de Boca de Aroa",
+        "time": 1782493020000,
+        "depth": 6.9,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0f9625e2-1367-4543-a04e-9c11f97fe3e5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.71,
+          10.55,
+          10.1
+        ]
+      },
+      "properties": {
+        "mag": 2.2,
+        "place": "9 km al sureste de Naiguata",
+        "time": 1782492360000,
+        "depth": 10.1,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "13633bb6-e09d-469b-9d4c-df1a764bcfc1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.75,
+          10.64,
+          11.8
+        ]
+      },
+      "properties": {
+        "mag": 2.3,
+        "place": "2 km al noroeste de Naiguata",
+        "time": 1782492000000,
+        "depth": 11.8,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "37be6d87-4399-4a71-b129-ae24da570bb5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.81,
+          10.59,
+          3.6
+        ]
+      },
+      "properties": {
+        "mag": 2.6,
+        "place": "9 km al suroeste de Naiguata",
+        "time": 1782491760000,
+        "depth": 3.6,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "67520a95-fd79-4734-81ab-7051b7a3b81d",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.09,
+          9.91,
+          4.9
+        ]
+      },
+      "properties": {
+        "mag": 3.2,
+        "place": "9 km al sureste de Clarines",
+        "time": 1782491160000,
+        "depth": 4.9,
+        "source": "FUNVISIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "854fbc85-a969-41b0-a6dd-739d3611582b",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.1,
+          10.57,
+          5.1
+        ]
+      },
+      "properties": {
+        "mag": 2.5,
+        "place": "20 km al oeste de La Guaira",
+        "time": 1782490920000,
+        "depth": 5.1,
+        "source": "FUNVISIS"
+      }
+    }
+  ]
+}

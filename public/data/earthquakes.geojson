@@ -1,0 +1,381 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1782661370000,
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=2.0&minlatitude=0.6&maxlatitude=12.5&minlongitude=-73.4&maxlongitude=-59.8&starttime=2026-06-24",
+    "title": "USGS Earthquakes",
+    "status": 200,
+    "api": "2.4.0",
+    "count": 9
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.3,
+        "place": "19 km WSW of Morón, Venezuela",
+        "time": 1782639238852,
+        "updated": 1782655565862,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8sx",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t8sx&format=geojson",
+        "felt": 7,
+        "cdi": 3.9,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 287,
+        "net": "us",
+        "code": "6000t8sx",
+        "ids": ",us6000t8sx,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 53,
+        "dmin": 2.715,
+        "rms": 0.54,
+        "gap": 112,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.3 - 19 km WSW of Morón, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.3766,
+          10.4497,
+          10
+        ]
+      },
+      "id": "us6000t8sx"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.5,
+        "place": "20 km W of Boca de Aroa, Venezuela",
+        "time": 1782636370376,
+        "updated": 1782655247469,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8su",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t8su&format=geojson",
+        "felt": 4,
+        "cdi": 3.1,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 313,
+        "net": "us",
+        "code": "6000t8su",
+        "ids": ",us6000t8su,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 36,
+        "dmin": 2.766,
+        "rms": 0.83,
+        "gap": 174,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.5 - 20 km W of Boca de Aroa, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.4901,
+          10.6806,
+          10
+        ]
+      },
+      "id": "us6000t8su"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.8,
+        "place": "35 km NNE of El Limón, Venezuela",
+        "time": 1782588036606,
+        "updated": 1782615772178,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8q8",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t8q8&format=geojson",
+        "felt": 49,
+        "cdi": 4.1,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 375,
+        "net": "us",
+        "code": "6000t8q8",
+        "ids": ",us6000t8q8,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 66,
+        "dmin": 3.52,
+        "rms": 0.54,
+        "gap": 46,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.8 - 35 km NNE of El Limón, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.5112,
+          10.6023,
+          10
+        ]
+      },
+      "id": "us6000t8q8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.7,
+        "place": "54 km N of El Limón, Venezuela",
+        "time": 1782512171931,
+        "updated": 1782601002953,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8k6",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t8k6&format=geojson",
+        "felt": 43,
+        "cdi": 3.6,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 355,
+        "net": "us",
+        "code": "6000t8k6",
+        "ids": ",us6000t8k6,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 81,
+        "dmin": 3.545,
+        "rms": 0.74,
+        "gap": 63,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 4.7 - 54 km N of El Limón, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.5993,
+          10.8,
+          10
+        ]
+      },
+      "id": "us6000t8k6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.4,
+        "place": "17 km WSW of Morón, Venezuela",
+        "time": 1782447570378,
+        "updated": 1782521995633,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t8d1",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t8d1&format=geojson",
+        "felt": 6,
+        "cdi": 3.4,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 300,
+        "net": "us",
+        "code": "6000t8d1",
+        "ids": ",us6000t8d1,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 44,
+        "dmin": 2.731,
+        "rms": 1.47,
+        "gap": 132,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.4 - 17 km WSW of Morón, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.3607,
+          10.4537,
+          10
+        ]
+      },
+      "id": "us6000t8d1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.4,
+        "place": "5 km NE of Guatire, Venezuela",
+        "time": 1782366503136,
+        "updated": 1782574336601,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t81p",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t81p&format=geojson",
+        "felt": 15,
+        "cdi": 4.1,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 304,
+        "net": "us",
+        "code": "6000t81p",
+        "ids": ",us6000t81p,",
+        "sources": ",us,",
+        "types": ",dyfi,origin,phase-data,",
+        "nst": 32,
+        "dmin": 4.379,
+        "rms": 0.67,
+        "gap": 114,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.4 - 5 km NE of Guatire, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.5057,
+          10.5111,
+          10
+        ]
+      },
+      "id": "us6000t81p"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 4.5,
+        "place": "13 km N of Caucagüito, Venezuela",
+        "time": 1782339834046,
+        "updated": 1782467382027,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t80d",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t80d&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 312,
+        "net": "us",
+        "code": "6000t80d",
+        "ids": ",us6000t80d,",
+        "sources": ",us,",
+        "types": ",origin,phase-data,",
+        "nst": 29,
+        "dmin": 4.225,
+        "rms": 0.43,
+        "gap": 141,
+        "magType": "mb",
+        "type": "earthquake",
+        "title": "M 4.5 - 13 km N of Caucagüito, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.7168,
+          10.6092,
+          10
+        ]
+      },
+      "id": "us6000t80d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 7.5,
+        "place": "28 km SE of Yumare, Venezuela",
+        "time": 1782338711566,
+        "updated": 1782660429730,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zp",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t7zp&format=geojson",
+        "felt": 617,
+        "cdi": 8.7,
+        "mmi": 9.046,
+        "alert": "red",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 2537,
+        "net": "us",
+        "code": "6000t7zp",
+        "ids": ",us6000t7zp,",
+        "sources": ",us,",
+        "types": ",dyfi,event-sequence,finite-fault,general-header,general-text,ground-failure,losspager,moment-tensor,oaf,origin,phase-data,shakemap,",
+        "nst": 97,
+        "dmin": 9.681,
+        "rms": 0.61,
+        "gap": 50,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 7.5 - 28 km SE of Yumare, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.4716,
+          10.4351,
+          10
+        ]
+      },
+      "id": "us6000t7zp"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 7.2,
+        "place": "23 km SE of Yumare, Venezuela",
+        "time": 1782338673389,
+        "updated": 1782596776935,
+        "tz": null,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zc",
+        "detail": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000t7zc&format=geojson",
+        "felt": null,
+        "cdi": null,
+        "mmi": 8.887,
+        "alert": "red",
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 2000,
+        "net": "us",
+        "code": "6000t7zc",
+        "ids": ",atth5pbk,us6000t7zc,",
+        "sources": ",at,us,",
+        "types": ",general-header,general-text,ground-failure,internal-origin,losspager,moment-tensor,origin,phase-data,shakemap,",
+        "nst": 100,
+        "dmin": 2.587,
+        "rms": 0.6,
+        "gap": 21,
+        "magType": "mww",
+        "type": "earthquake",
+        "title": "M 7.2 - 23 km SE of Yumare, Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.5277,
+          10.436,
+          20.294
+        ]
+      },
+      "id": "us6000t7zc"
+    }
+  ],
+  "bbox": [
+    -68.5277,
+    10.4351,
+    10,
+    -66.5057,
+    10.8,
+    20.294
+  ]
+}

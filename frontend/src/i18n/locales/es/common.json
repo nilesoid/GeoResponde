@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "situation": "Situación",
+    "find": "Buscar",
+    "report": "Reportar"
+  },
+  "sidebar": {
+    "title": "GeoResponde",
+    "subtitle": "Terremoto Venezuela 2026",
+    "loading": "Cargando catálogo...",
+    "error": "Error al cargar el catálogo.",
+    "situationLayers": "Capas de Situación",
+    "externalResources": "Recursos Externos",
+    "categories": {
+      "Earthquakes": "Sismos",
+      "Hazards": "Peligros",
+      "Satellite": "Satélite",
+      "Geology": "Geología",
+      "Infrastructure": "Infraestructura",
+      "Humanitarian": "Humanitario",
+      "Logistics": "Logística",
+      "Community": "Comunidad"
+    },
+    "confidence": {
+      "Official": "Oficial",
+      "Community Verified": "Comunidad Verificada",
+      "Verified": "Verificado",
+      "Pending Verification": "Pendiente de Verificación"
+    }
+  },
+  "find": {
+    "title": "Buscar Personas y Recursos",
+    "subtitle": "Busca en múltiples organizaciones humanitarias confiables simultáneamente.",
+    "placeholder": "Buscar personas, edificios, hospitales, refugios...",
+    "examples": "Ejemplos rápidos:",
+    "button": "Buscar",
+    "buttonLoading": "Buscando...",
+    "source": "Fuente",
+    "type": "Tipo",
+    "openResource": "Abrir Recurso Original ↗",
+    "noResults": "No se encontraron resultados para \"{{query}}\". Intenta con otro término de búsqueda.",
+    "error": "Error buscando proveedores"
+  },
+  "report": {
+    "title": "Reportar Información",
+    "subtitle": "Reporta personas desaparecidas, edificios dañados y actualizaciones de emergencia a través de organizaciones confiables.",
+    "missingPerson": "Persona Desaparecida",
+    "foundPerson": "Persona Encontrada",
+    "damagedBuilding": "Edificio Dañado",
+    "shelterUpdate": "Actualización de Refugio",
+    "back": "← Volver a Categorías",
+    "redirectTitle": "Continúa en la plataforma oficial de reportes",
+    "redirectText": "Para asegurar la integridad de los datos y evitar la fragmentación, GeoResponde no almacena reportes directamente. Te redirigiremos a la plataforma de la organización autorizada donde tu reporte será manejado y verificado adecuadamente.",
+    "goToOfficial": "Ir a la Plataforma Oficial ↗"
+  }
+}

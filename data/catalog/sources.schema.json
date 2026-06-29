@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sources Catalog Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "url": { "type": "string", "format": "uri" },
+      "organizationId": { "type": "string" },
+      "license": { "type": "string" }
+    },
+    "required": ["id", "name", "url", "organizationId"]
+  }
+}

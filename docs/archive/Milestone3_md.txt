@@ -1,0 +1,500 @@
+# GeoResponde Venezuela
+
+## Milestone 3 – Humanitarian Network
+
+### Federated Search & Submission Router
+
+**Status:** Architecture Specification
+
+**Priority:** P0
+
+**Owner:** Antigravity
+
+---
+
+# Vision
+
+GeoResponde is **not** another humanitarian database.
+
+GeoResponde is an **orchestration platform**.
+
+Its purpose is to connect scientific information, humanitarian initiatives and citizens without duplicating existing efforts.
+
+The application is organized around three domains:
+
+```
+Scientific Intelligence
+
+↓
+
+Humanitarian Network
+
+↓
+
+Operations (Submision Router)
+```
+
+Scientific Intelligence is already implemented.
+
+This milestone focuses on implementing the Humanitarian Network and the first version of Operations.
+
+---
+
+# Guiding Principles
+
+GeoResponde SHALL:
+
+* Aggregate information.
+* Never compete with existing initiatives.
+* Never become another missing persons database.
+* Never duplicate humanitarian datasets whenever possible.
+* Always preserve attribution.
+* Always redirect users back to the original source.
+
+GeoResponde acts as an orchestrator.
+
+---
+
+# Humanitarian Network
+
+The Humanitarian Network is composed of external providers.
+
+Each provider maintains ownership of its own data.
+
+GeoResponde only integrates access.
+
+Examples:
+
+* Terremoto Venezuela
+* Venezuela Te Busca
+* HazLoHoy
+* Venezuela Reporta
+* Huellas Can
+* Refugios Venezuela
+* Hospitales Venezuela
+* Ayuda para Venezuela
+
+The system must support adding new providers without modifying existing code.
+
+---
+
+# Provider Registry
+
+Create a new registry independent from the scientific layers.
+
+```
+providers/
+
+humanitarian/
+
+scientific/
+```
+
+Each provider must include metadata.
+
+Example:
+
+id
+
+display_name
+
+website
+
+description
+
+category
+
+logo
+
+status
+
+capabilities
+
+---
+
+Example
+
+id:
+terremotovenezuela
+
+capabilities:
+
+* map
+
+* search
+
+* building_details
+
+* external_link
+
+---
+
+# Provider Capabilities
+
+Instead of implementing custom integrations, providers declare capabilities.
+
+Possible capabilities:
+
+search
+
+map
+
+building_details
+
+person_lookup
+
+submission
+
+external_link
+
+statistics
+
+directory
+
+future_api
+
+The UI should adapt automatically depending on provider capabilities.
+
+---
+
+# Federated Search
+
+This becomes the primary way users interact with humanitarian information.
+
+Users perform a single search.
+
+GeoResponde dispatches that query to every compatible provider.
+
+```
+User
+
+↓
+
+GeoResponde
+
+↓
+
+Provider A
+
+Provider B
+
+Provider C
+
+...
+
+↓
+
+Results
+
+↓
+
+Unified Presentation
+```
+
+GeoResponde NEVER stores those search results permanently.
+
+Results remain owned by their providers.
+
+---
+
+# Search Categories
+
+Support multiple search domains.
+
+People
+
+Buildings
+
+Addresses
+
+Hospitals
+
+Shelters
+
+Collection Centers
+
+Pets
+
+Organizations
+
+Future categories can be added.
+
+---
+
+# Search Providers
+
+Every provider implements a simple interface.
+
+```
+search(query)
+
+↓
+
+Provider specific implementation
+
+↓
+
+Normalized Result
+```
+
+GeoResponde never exposes provider-specific logic to the UI.
+
+---
+
+# Normalized Search Result
+
+Every provider returns:
+
+provider
+
+provider_id
+
+type
+
+title
+
+subtitle
+
+status
+
+location
+
+last_update
+
+confidence
+
+url
+
+thumbnail
+
+metadata
+
+The frontend renders all providers identically.
+
+---
+
+# Provider Status
+
+Each provider should expose:
+
+Online
+
+Offline
+
+Maintenance
+
+Unknown
+
+The UI should show provider availability.
+
+---
+
+# Search Result Attribution
+
+Every result must include:
+
+Provider logo
+
+Provider name
+
+Last update
+
+Open Original Resource
+
+GeoResponde never becomes the canonical source.
+
+---
+
+# Submission Router
+
+Submission Router replaces the idea of creating another reporting platform.
+
+Users submit information once.
+
+GeoResponde decides where that report should go.
+
+Initial version:
+
+No automatic submission.
+
+Instead:
+
+Determine compatible providers.
+
+Guide users to the correct official platform.
+
+Future versions may automate submission when APIs become available.
+
+---
+
+# Submission Categories
+
+Missing Person
+
+Found Person
+
+Building Damage
+
+Collection Center
+
+Shelter
+
+Hospital Update
+
+Volunteer
+
+Pet
+
+Road Closure
+
+Infrastructure Damage
+
+---
+
+# Submission Flow
+
+User selects report type.
+
+GeoResponde validates information.
+
+GeoResponde determines compatible providers.
+
+Example:
+
+Found Person
+
+↓
+
+Compatible Providers
+
+✓ VenezuelaTeBusca
+
+✓ HazLoHoy
+
+↓
+
+Open Official Submission
+
+or
+
+Automatic API Submission (future)
+
+---
+
+# Submission Package
+
+Internally every report becomes a normalized object.
+
+Provider adapters transform it.
+
+Provider A
+
+↓
+
+API
+
+Provider B
+
+↓
+
+Web Form
+
+Provider C
+
+↓
+
+Future Integration
+
+The internal model remains provider independent.
+
+---
+
+# Provider Adapters
+
+Every provider has its own adapter.
+
+Possible adapter types:
+
+Supabase
+
+REST
+
+GraphQL
+
+ArcGIS Feature Service
+
+GeoJSON
+
+Web Form
+
+Static Website
+
+Future adapters should require no frontend changes.
+
+---
+
+# Resource Links
+
+Some providers expose no searchable data.
+
+Examples:
+
+Donation campaigns
+
+Volunteer organizations
+
+Emergency hotlines
+
+These become Resources.
+
+Resources are NOT map layers.
+
+Resources are NOT searchable entities.
+
+Resources are displayed as curated external links.
+
+---
+
+# Future Vision
+
+The architecture should allow future capabilities:
+
+Live APIs
+
+Official integrations
+
+Bidirectional synchronization
+
+Provider authentication
+
+Automatic submission
+
+Provider statistics
+
+Emergency Exchange Protocol (future)
+
+No work on protocol standardization should begin now.
+
+The architecture should simply avoid assumptions that would prevent such evolution.
+
+---
+
+# Success Criteria
+
+The Humanitarian Network is considered complete when:
+
+A user performs one search.
+
+GeoResponde queries every configured provider.
+
+Results are merged into a single interface.
+
+Every result preserves attribution.
+
+Users are redirected to official resources.
+
+No humanitarian datasets are duplicated.
+
+New providers can be added by creating a provider adapter only.
+
+No frontend modifications are required when adding providers.

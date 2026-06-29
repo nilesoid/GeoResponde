@@ -1,0 +1,27 @@
+{
+  "name": "@georesponde/catalog",
+  "version": "1.0.0",
+  "description": "Catalog Engine for GeoResponde Venezuela",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "geo-catalog": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@georesponde/shared": "link:..\\shared",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^3.0.1",
+    "commander": "^12.0.0",
+    "yaml": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  }
+}

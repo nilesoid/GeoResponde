@@ -1,0 +1,283 @@
+[
+  {
+    "id": "layer-earthquakes",
+    "name": "Recent Earthquakes",
+    "datasetIds": [
+      "ds-earthquakes-recent"
+    ],
+    "format": "geojson",
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Hourly",
+    "enabled": true,
+    "visualization": {
+      "type": "circle",
+      "paint": {
+        "circle-color": "#e74c3c",
+        "circle-radius": [
+          "*",
+          [
+            "get",
+            "mag"
+          ],
+          2
+        ]
+      }
+    }
+  },
+  {
+    "id": "layer-funvisis",
+    "name": "FUNVISIS Local Earthquakes",
+    "datasetIds": [
+      "dataset-funvisis-earthquakes"
+    ],
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "points",
+      "color": "#3498db"
+    }
+  },
+  {
+    "id": "layer-hospitals",
+    "name": "Hospitals",
+    "datasetIds": [
+      "dataset-hospitals"
+    ],
+    "category": "Infrastructure",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "points",
+      "color": "#2ecc71"
+    }
+  },
+  {
+    "id": "layer-shelters",
+    "name": "Shelters",
+    "datasetIds": [
+      "ds-shelters"
+    ],
+    "category": "Humanitarian",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-collection-centers-chile",
+    "name": "Collection Centers (Chile)",
+    "datasetIds": [
+      "ds-collection-centers-chile"
+    ],
+    "category": "Logistics",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-road-closures",
+    "name": "Road Closures",
+    "datasetIds": [
+      "ds-road-closures"
+    ],
+    "category": "Infrastructure",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-landslides",
+    "name": "Landslides",
+    "datasetIds": [
+      "ds-landslides"
+    ],
+    "category": "Infrastructure",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-power-outages",
+    "name": "Power Outages",
+    "datasetIds": [
+      "ds-power-outages"
+    ],
+    "category": "Infrastructure",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-airports",
+    "name": "Airports",
+    "datasetIds": [
+      "ds-airports"
+    ],
+    "category": "Logistics",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-ports",
+    "name": "Ports",
+    "datasetIds": [
+      "ds-ports"
+    ],
+    "category": "Logistics",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-volunteer-organizations",
+    "name": "Volunteer Organizations",
+    "datasetIds": [
+      "ds-volunteer-organizations"
+    ],
+    "category": "Community",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-donation-campaigns",
+    "name": "Donation Campaigns",
+    "datasetIds": [
+      "ds-donation-campaigns"
+    ],
+    "category": "Humanitarian",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {}
+  },
+  {
+    "id": "layer-faults",
+    "name": "Tectonic Faults",
+    "datasetIds": [
+      "dataset-faults"
+    ],
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "line",
+      "color": "#f1c40f"
+    }
+  },
+  {
+    "id": "layer-geologic-units",
+    "name": "USGS Geologic Units",
+    "datasetIds": [
+      "ds-usgs-geologic-units"
+    ],
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "fill",
+      "color": "#95a5a6"
+    }
+  },
+  {
+    "id": "layer-sat-before",
+    "name": "Esri World Imagery (Before)",
+    "datasetIds": [
+      "ds-satellite-before"
+    ],
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "raster",
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+    }
+  },
+  {
+    "id": "layer-copernicus-damage",
+    "name": "Copernicus Damage Assessment",
+    "datasetIds": [
+      "ds-copernicus-buildings",
+      "ds-copernicus-roads"
+    ],
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "mixed"
+    }
+  },
+  {
+    "id": "layer-copernicus-ground-movement",
+    "name": "Copernicus Ground Movement",
+    "datasetIds": [
+      "ds-copernicus-ground-movement"
+    ],
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "fill"
+    }
+  },
+  {
+    "id": "layer-nasa-sentinel-damage",
+    "name": "NASA Sentinel Damage Map",
+    "datasetIds": [
+      "ds-nasa-sentinel-damage"
+    ],
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "fill"
+    }
+  },
+  {
+    "id": "layer-nasa-interferogram",
+    "name": "NASA Unwrapped Interferogram",
+    "datasetIds": [
+      "ds-nasa-interferogram"
+    ],
+    "category": "Scientific",
+    "confidence": "Verified",
+    "refreshFrequency": "Static",
+    "enabled": false,
+    "visualization": {
+      "type": "raster",
+      "url": "https://tiledimageservices7.arcgis.com/WSiUmUhlFx4CtMBB/arcgis/rest/services/202610_sentinel1_unwrappedInterferogram/ImageServer/tile/{z}/{y}/{x}"
+    }
+  },
+  {
+    "id": "layer-citizen-reports",
+    "name": "Citizen Reports (Aggregated)",
+    "datasetIds": [
+      "ds-citizen-reports"
+    ],
+    "category": "Humanitarian",
+    "confidence": "Pending Verification",
+    "refreshFrequency": "Hourly",
+    "enabled": false,
+    "visualization": {
+      "type": "mixed"
+    }
+  }
+]

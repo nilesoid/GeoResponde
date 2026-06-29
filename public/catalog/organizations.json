@@ -1,0 +1,105 @@
+[
+  {
+    "id": "org-funvisis",
+    "name": "FUNVISIS",
+    "type": "GOV"
+  },
+  {
+    "id": "org-usgs",
+    "name": "USGS",
+    "type": "GOV"
+  },
+  {
+    "id": "org-copernicus-ems",
+    "name": "Copernicus EMS",
+    "type": "GOV"
+  },
+  {
+    "id": "org-gdacs",
+    "name": "GDACS",
+    "type": "OTHER"
+  },
+  {
+    "id": "org-ocha",
+    "name": "OCHA",
+    "type": "OTHER"
+  },
+  {
+    "id": "org-reliefweb",
+    "name": "ReliefWeb",
+    "type": "OTHER"
+  },
+  {
+    "id": "org-hot-osm",
+    "name": "HOT OpenStreetMap",
+    "type": "NGO"
+  },
+  {
+    "id": "org-cruz-roja-ve",
+    "name": "Cruz Roja Venezolana",
+    "type": "NGO"
+  },
+  {
+    "id": "org-proteccion-civil",
+    "name": "Protección Civil",
+    "type": "GOV"
+  },
+  {
+    "id": "org-raster4",
+    "name": "Raster4",
+    "type": "PRIVATE"
+  },
+  {
+    "id": "org-esri-chile",
+    "name": "Esri Chile",
+    "type": "PRIVATE"
+  },
+  {
+    "id": "org-vantor",
+    "name": "Vantor Open Data Program",
+    "website": "https://vantor.com",
+    "type": "NGO"
+  },
+  {
+    "id": "org-osm",
+    "name": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org",
+    "type": "NGO"
+  },
+  {
+    "id": "org-gem",
+    "name": "Global Earthquake Model Foundation",
+    "url": "https://www.globalquakemodel.org",
+    "type": "NGO"
+  },
+  {
+    "id": "org-emsc",
+    "name": "EMSC",
+    "url": "https://www.emsc-csem.org",
+    "type": "NGO"
+  },
+  {
+    "id": "org-macrostrat",
+    "name": "Macrostrat",
+    "url": "https://macrostrat.org",
+    "type": "OTHER"
+  },
+  {
+    "id": "org-local",
+    "name": "Local Simulation",
+    "url": "local",
+    "type": "GOV"
+  },
+  {
+    "id": "org-nasa",
+    "name": "NASA",
+    "url": "https://nasa.gov",
+    "type": "GOV"
+  },
+  {
+    "id": "org-volunteer",
+    "name": "Volunteer Groups",
+    "url": "https://example.com/",
+    "type": "NGO"
+  }
+]

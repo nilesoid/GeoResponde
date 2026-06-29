@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Datasets Catalog Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the dataset"
+      },
+      "title": {
+        "type": "string",
+        "description": "Human-readable title"
+      },
+      "description": {
+        "type": "string"
+      },
+      "sourceId": {
+        "type": "string",
+        "description": "Reference to a source in sources.yaml"
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "required": ["id", "title", "sourceId"]
+  }
+}

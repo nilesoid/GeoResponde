@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Organizations Catalog Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "website": { "type": "string", "format": "uri" },
+      "type": {
+        "type": "string",
+        "enum": ["NGO", "GOV", "ACADEMIC", "PRIVATE", "OTHER"]
+      }
+    },
+    "required": ["id", "name", "type"]
+  }
+}

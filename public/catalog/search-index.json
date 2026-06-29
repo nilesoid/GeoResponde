@@ -1,0 +1,471 @@
+[
+  {
+    "id": "org-funvisis",
+    "title": "FUNVISIS",
+    "type": "organization",
+    "description": "GOV"
+  },
+  {
+    "id": "org-usgs",
+    "title": "USGS",
+    "type": "organization",
+    "description": "GOV"
+  },
+  {
+    "id": "org-copernicus-ems",
+    "title": "Copernicus EMS",
+    "type": "organization",
+    "description": "GOV"
+  },
+  {
+    "id": "org-gdacs",
+    "title": "GDACS",
+    "type": "organization",
+    "description": "OTHER"
+  },
+  {
+    "id": "org-ocha",
+    "title": "OCHA",
+    "type": "organization",
+    "description": "OTHER"
+  },
+  {
+    "id": "org-reliefweb",
+    "title": "ReliefWeb",
+    "type": "organization",
+    "description": "OTHER"
+  },
+  {
+    "id": "org-hot-osm",
+    "title": "HOT OpenStreetMap",
+    "type": "organization",
+    "description": "NGO"
+  },
+  {
+    "id": "org-cruz-roja-ve",
+    "title": "Cruz Roja Venezolana",
+    "type": "organization",
+    "description": "NGO"
+  },
+  {
+    "id": "org-proteccion-civil",
+    "title": "Protección Civil",
+    "type": "organization",
+    "description": "GOV"
+  },
+  {
+    "id": "org-raster4",
+    "title": "Raster4",
+    "type": "organization",
+    "description": "PRIVATE"
+  },
+  {
+    "id": "org-esri-chile",
+    "title": "Esri Chile",
+    "type": "organization",
+    "description": "PRIVATE"
+  },
+  {
+    "id": "org-vantor",
+    "title": "Vantor Open Data Program",
+    "type": "organization",
+    "description": "NGO"
+  },
+  {
+    "id": "org-osm",
+    "title": "OpenStreetMap",
+    "type": "organization",
+    "description": "NGO"
+  },
+  {
+    "id": "org-gem",
+    "title": "Global Earthquake Model Foundation",
+    "type": "organization",
+    "description": "NGO"
+  },
+  {
+    "id": "org-emsc",
+    "title": "EMSC",
+    "type": "organization",
+    "description": "NGO"
+  },
+  {
+    "id": "org-macrostrat",
+    "title": "Macrostrat",
+    "type": "organization",
+    "description": "OTHER"
+  },
+  {
+    "id": "org-local",
+    "title": "Local Simulation",
+    "type": "organization",
+    "description": "GOV"
+  },
+  {
+    "id": "org-nasa",
+    "title": "NASA",
+    "type": "organization",
+    "description": "GOV"
+  },
+  {
+    "id": "org-volunteer",
+    "title": "Volunteer Groups",
+    "type": "organization",
+    "description": "NGO"
+  },
+  {
+    "id": "src-usgs-api",
+    "title": "USGS Earthquake API (2.5+ M, 1 Day)",
+    "type": "source"
+  },
+  {
+    "id": "src-aftershocks-placeholder",
+    "title": "Source for Aftershocks",
+    "type": "source"
+  },
+  {
+    "id": "src-osm-overpass",
+    "title": "OpenStreetMap Overpass API",
+    "type": "source"
+  },
+  {
+    "id": "src-shelters-placeholder",
+    "title": "Source for Shelters",
+    "type": "source"
+  },
+  {
+    "id": "src-collection-centers-chile-placeholder",
+    "title": "Source for Collection Centers (Chile)",
+    "type": "source"
+  },
+  {
+    "id": "src-road-closures-placeholder",
+    "title": "Source for Road Closures",
+    "type": "source"
+  },
+  {
+    "id": "src-damage-assessment-placeholder",
+    "title": "Source for Damage Assessment",
+    "type": "source"
+  },
+  {
+    "id": "src-satellite-imagery-placeholder",
+    "title": "Source for Satellite Imagery",
+    "type": "source"
+  },
+  {
+    "id": "src-landslides-placeholder",
+    "title": "Source for Landslides",
+    "type": "source"
+  },
+  {
+    "id": "src-power-outages-placeholder",
+    "title": "Source for Power Outages",
+    "type": "source"
+  },
+  {
+    "id": "src-airports-placeholder",
+    "title": "Source for Airports",
+    "type": "source"
+  },
+  {
+    "id": "src-ports-placeholder",
+    "title": "Source for Ports",
+    "type": "source"
+  },
+  {
+    "id": "src-volunteer-organizations-placeholder",
+    "title": "Source for Volunteer Organizations",
+    "type": "source"
+  },
+  {
+    "id": "src-donation-campaigns-placeholder",
+    "title": "Source for Donation Campaigns",
+    "type": "source"
+  },
+  {
+    "id": "src-funvisis-maravilla",
+    "title": "FUNVISIS Maravilla Feed",
+    "type": "source"
+  },
+  {
+    "id": "src-gem-gafdb",
+    "title": "GEM Global Active Faults Database",
+    "type": "source"
+  },
+  {
+    "id": "src-usgs-ds-199",
+    "title": "USGS Data Series 199 (Geologic Map of Northern Venezuela)",
+    "type": "source"
+  },
+  {
+    "id": "src-vantor",
+    "title": "Vantor Open Data Program",
+    "type": "source"
+  },
+  {
+    "id": "src-copernicus",
+    "title": "Copernicus Emergency Management Service",
+    "type": "source"
+  },
+  {
+    "id": "src-nasa-arcgis",
+    "title": "NASA EarthData",
+    "type": "source"
+  },
+  {
+    "id": "src-citizen-reports",
+    "title": "Citizen Crowdsourced Aggregation",
+    "type": "source"
+  },
+  {
+    "id": "ds-earthquakes-recent",
+    "title": "Recent Earthquakes (M2.5+, Last 24h)",
+    "type": "dataset",
+    "description": "Automatically updated GeoJSON feed of recent global seismic activity."
+  },
+  {
+    "id": "dataset-aftershocks",
+    "title": "Recorded Aftershocks (USGS)",
+    "type": "dataset",
+    "description": "Recorded aftershocks in Venezuela since June 23, 2026"
+  },
+  {
+    "id": "dataset-funvisis-earthquakes",
+    "title": "FUNVISIS Local Earthquakes",
+    "type": "dataset",
+    "description": "Locally recorded seismic events by the Venezuelan Foundation for Seismological Research"
+  },
+  {
+    "id": "ds-aftershocks",
+    "title": "Aftershocks",
+    "type": "dataset",
+    "description": "Seismic aftershock events."
+  },
+  {
+    "id": "dataset-hospitals",
+    "title": "OpenStreetMap Hospitals (Venezuela)",
+    "type": "dataset",
+    "description": "Verified health facilities sourced from OSM Overpass API."
+  },
+  {
+    "id": "ds-shelters",
+    "title": "Shelters",
+    "type": "dataset",
+    "description": "Emergency shelters available for displaced populations."
+  },
+  {
+    "id": "ds-collection-centers-chile",
+    "title": "Collection Centers (Chile)",
+    "type": "dataset",
+    "description": "Donation collection centers located in Chile."
+  },
+  {
+    "id": "ds-road-closures",
+    "title": "Road Closures",
+    "type": "dataset",
+    "description": "Live status of blocked or damaged roads."
+  },
+  {
+    "id": "ds-damage-assessment",
+    "title": "Damage Assessment",
+    "type": "dataset",
+    "description": "Satellite-derived damage assessment maps."
+  },
+  {
+    "id": "ds-satellite-imagery",
+    "title": "Satellite Imagery",
+    "type": "dataset",
+    "description": "High-resolution pre and post event imagery."
+  },
+  {
+    "id": "ds-landslides",
+    "title": "Landslides",
+    "type": "dataset",
+    "description": "Identified landslide zones."
+  },
+  {
+    "id": "ds-power-outages",
+    "title": "Power Outages",
+    "type": "dataset",
+    "description": "Reported power grid failures."
+  },
+  {
+    "id": "ds-airports",
+    "title": "Airports",
+    "type": "dataset",
+    "description": "Status of regional airports."
+  },
+  {
+    "id": "ds-ports",
+    "title": "Ports",
+    "type": "dataset",
+    "description": "Status of maritime ports."
+  },
+  {
+    "id": "ds-volunteer-organizations",
+    "title": "Volunteer Organizations",
+    "type": "dataset",
+    "description": "Active volunteer groups on the ground."
+  },
+  {
+    "id": "ds-donation-campaigns",
+    "title": "Donation Campaigns",
+    "type": "dataset",
+    "description": "Verified financial donation campaigns."
+  },
+  {
+    "id": "dataset-faults",
+    "title": "GEM Global Active Faults (Venezuela)",
+    "type": "dataset",
+    "description": "Active tectonic faults in the Venezuela region."
+  },
+  {
+    "id": "ds-usgs-geologic-units",
+    "title": "USGS Geologic Units (Northern Venezuela)",
+    "type": "dataset",
+    "description": "Geologic polygons from USGS Data Series 199"
+  },
+  {
+    "id": "ds-satellite-before",
+    "title": "Esri World Imagery (Pre-Event Base)",
+    "type": "dataset",
+    "description": "High-resolution global satellite basemap (Esri). Acquisition Date: May 1, 2026."
+  },
+  {
+    "id": "ds-copernicus-buildings",
+    "title": "Copernicus Damage Grading (Buildings)",
+    "type": "dataset",
+    "description": "Rapid mapping damage grading for built-up areas (Polygons and Points)"
+  },
+  {
+    "id": "ds-copernicus-roads",
+    "title": "Copernicus Damage Grading (Roads)",
+    "type": "dataset",
+    "description": "Rapid mapping damage grading for transportation networks"
+  },
+  {
+    "id": "ds-copernicus-ground-movement",
+    "title": "Copernicus Ground Movement",
+    "type": "dataset",
+    "description": "Landslides and earth flow extents"
+  },
+  {
+    "id": "ds-nasa-sentinel-damage",
+    "title": "NASA Sentinel-1 Damage Proxy Map",
+    "type": "dataset",
+    "description": "Likelihood of damaged structures based on Sentinel-1 radar data."
+  },
+  {
+    "id": "ds-nasa-interferogram",
+    "title": "NASA Sentinel-1 Unwrapped Interferogram",
+    "type": "dataset",
+    "description": "Continuous line-of-sight ground displacement."
+  },
+  {
+    "id": "ds-citizen-reports",
+    "title": "Citizen Reports",
+    "type": "dataset",
+    "description": "Aggregated citizen reports for missing persons and shelters."
+  },
+  {
+    "id": "layer-earthquakes",
+    "title": "Recent Earthquakes",
+    "type": "layer"
+  },
+  {
+    "id": "layer-funvisis",
+    "title": "FUNVISIS Local Earthquakes",
+    "type": "layer"
+  },
+  {
+    "id": "layer-hospitals",
+    "title": "Hospitals",
+    "type": "layer"
+  },
+  {
+    "id": "layer-shelters",
+    "title": "Shelters",
+    "type": "layer"
+  },
+  {
+    "id": "layer-collection-centers-chile",
+    "title": "Collection Centers (Chile)",
+    "type": "layer"
+  },
+  {
+    "id": "layer-road-closures",
+    "title": "Road Closures",
+    "type": "layer"
+  },
+  {
+    "id": "layer-landslides",
+    "title": "Landslides",
+    "type": "layer"
+  },
+  {
+    "id": "layer-power-outages",
+    "title": "Power Outages",
+    "type": "layer"
+  },
+  {
+    "id": "layer-airports",
+    "title": "Airports",
+    "type": "layer"
+  },
+  {
+    "id": "layer-ports",
+    "title": "Ports",
+    "type": "layer"
+  },
+  {
+    "id": "layer-volunteer-organizations",
+    "title": "Volunteer Organizations",
+    "type": "layer"
+  },
+  {
+    "id": "layer-donation-campaigns",
+    "title": "Donation Campaigns",
+    "type": "layer"
+  },
+  {
+    "id": "layer-faults",
+    "title": "Tectonic Faults",
+    "type": "layer"
+  },
+  {
+    "id": "layer-geologic-units",
+    "title": "USGS Geologic Units",
+    "type": "layer"
+  },
+  {
+    "id": "layer-sat-before",
+    "title": "Esri World Imagery (Before)",
+    "type": "layer"
+  },
+  {
+    "id": "layer-copernicus-damage",
+    "title": "Copernicus Damage Assessment",
+    "type": "layer"
+  },
+  {
+    "id": "layer-copernicus-ground-movement",
+    "title": "Copernicus Ground Movement",
+    "type": "layer"
+  },
+  {
+    "id": "layer-nasa-sentinel-damage",
+    "title": "NASA Sentinel Damage Map",
+    "type": "layer"
+  },
+  {
+    "id": "layer-nasa-interferogram",
+    "title": "NASA Unwrapped Interferogram",
+    "type": "layer"
+  },
+  {
+    "id": "layer-citizen-reports",
+    "title": "Citizen Reports (Aggregated)",
+    "type": "layer"
+  }
+]

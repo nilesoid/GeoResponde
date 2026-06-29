@@ -1,0 +1,765 @@
+{
+  "organizations": [
+    {
+      "id": "org-funvisis",
+      "name": "FUNVISIS",
+      "type": "GOV"
+    },
+    {
+      "id": "org-usgs",
+      "name": "USGS",
+      "type": "GOV"
+    },
+    {
+      "id": "org-copernicus-ems",
+      "name": "Copernicus EMS",
+      "type": "GOV"
+    },
+    {
+      "id": "org-gdacs",
+      "name": "GDACS",
+      "type": "OTHER"
+    },
+    {
+      "id": "org-ocha",
+      "name": "OCHA",
+      "type": "OTHER"
+    },
+    {
+      "id": "org-reliefweb",
+      "name": "ReliefWeb",
+      "type": "OTHER"
+    },
+    {
+      "id": "org-hot-osm",
+      "name": "HOT OpenStreetMap",
+      "type": "NGO"
+    },
+    {
+      "id": "org-cruz-roja-ve",
+      "name": "Cruz Roja Venezolana",
+      "type": "NGO"
+    },
+    {
+      "id": "org-proteccion-civil",
+      "name": "Protección Civil",
+      "type": "GOV"
+    },
+    {
+      "id": "org-raster4",
+      "name": "Raster4",
+      "type": "PRIVATE"
+    },
+    {
+      "id": "org-esri-chile",
+      "name": "Esri Chile",
+      "type": "PRIVATE"
+    },
+    {
+      "id": "org-vantor",
+      "name": "Vantor Open Data Program",
+      "website": "https://vantor.com",
+      "type": "NGO"
+    },
+    {
+      "id": "org-osm",
+      "name": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org",
+      "type": "NGO"
+    },
+    {
+      "id": "org-gem",
+      "name": "Global Earthquake Model Foundation",
+      "url": "https://www.globalquakemodel.org",
+      "type": "NGO"
+    },
+    {
+      "id": "org-emsc",
+      "name": "EMSC",
+      "url": "https://www.emsc-csem.org",
+      "type": "NGO"
+    },
+    {
+      "id": "org-macrostrat",
+      "name": "Macrostrat",
+      "url": "https://macrostrat.org",
+      "type": "OTHER"
+    },
+    {
+      "id": "org-local",
+      "name": "Local Simulation",
+      "url": "local",
+      "type": "GOV"
+    },
+    {
+      "id": "org-nasa",
+      "name": "NASA",
+      "url": "https://nasa.gov",
+      "type": "GOV"
+    },
+    {
+      "id": "org-volunteer",
+      "name": "Volunteer Groups",
+      "url": "https://example.com/",
+      "type": "NGO"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-usgs-api",
+      "name": "USGS Earthquake API (2.5+ M, 1 Day)",
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson",
+      "organizationId": "org-usgs",
+      "license": "Public Domain"
+    },
+    {
+      "id": "src-aftershocks-placeholder",
+      "name": "Source for Aftershocks",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-usgs"
+    },
+    {
+      "id": "src-osm-overpass",
+      "name": "OpenStreetMap Overpass API",
+      "url": "https://overpass-api.de",
+      "organizationId": "org-osm"
+    },
+    {
+      "id": "src-shelters-placeholder",
+      "name": "Source for Shelters",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-ocha"
+    },
+    {
+      "id": "src-collection-centers-chile-placeholder",
+      "name": "Source for Collection Centers (Chile)",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-cruz-roja-ve"
+    },
+    {
+      "id": "src-road-closures-placeholder",
+      "name": "Source for Road Closures",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-proteccion-civil"
+    },
+    {
+      "id": "src-damage-assessment-placeholder",
+      "name": "Source for Damage Assessment",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-copernicus-ems"
+    },
+    {
+      "id": "src-satellite-imagery-placeholder",
+      "name": "Source for Satellite Imagery",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-copernicus-ems"
+    },
+    {
+      "id": "src-landslides-placeholder",
+      "name": "Source for Landslides",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-funvisis"
+    },
+    {
+      "id": "src-power-outages-placeholder",
+      "name": "Source for Power Outages",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-proteccion-civil"
+    },
+    {
+      "id": "src-airports-placeholder",
+      "name": "Source for Airports",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-gdacs"
+    },
+    {
+      "id": "src-ports-placeholder",
+      "name": "Source for Ports",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-gdacs"
+    },
+    {
+      "id": "src-volunteer-organizations-placeholder",
+      "name": "Source for Volunteer Organizations",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-hot-osm"
+    },
+    {
+      "id": "src-donation-campaigns-placeholder",
+      "name": "Source for Donation Campaigns",
+      "url": "https://example.com/placeholder",
+      "organizationId": "org-reliefweb"
+    },
+    {
+      "id": "src-funvisis-maravilla",
+      "name": "FUNVISIS Maravilla Feed",
+      "url": "http://www.funvisis.gob.ve/maravilla.json",
+      "organizationId": "org-funvisis"
+    },
+    {
+      "id": "src-gem-gafdb",
+      "name": "GEM Global Active Faults Database",
+      "url": "https://github.com/GEMScienceTools/gem-global-active-faults",
+      "organizationId": "org-gem",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "src-usgs-ds-199",
+      "name": "USGS Data Series 199 (Geologic Map of Northern Venezuela)",
+      "url": "https://pubs.usgs.gov/ds/2006/199/",
+      "organizationId": "org-usgs"
+    },
+    {
+      "id": "src-vantor",
+      "name": "Vantor Open Data Program",
+      "url": "https://vantor-opendata.s3.amazonaws.com",
+      "organizationId": "org-vantor"
+    },
+    {
+      "id": "src-copernicus",
+      "name": "Copernicus Emergency Management Service",
+      "url": "https://emergency.copernicus.eu/",
+      "organizationId": "org-copernicus-ems"
+    },
+    {
+      "id": "src-nasa-arcgis",
+      "name": "NASA EarthData",
+      "url": "https://gis.earthdata.nasa.gov",
+      "organizationId": "org-nasa",
+      "type": "ArcGIS FeatureServer"
+    },
+    {
+      "id": "src-citizen-reports",
+      "name": "Citizen Crowdsourced Aggregation",
+      "url": "https://venezuelatebusca.com/",
+      "organizationId": "org-volunteer"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "ds-earthquakes-recent",
+      "title": "Recent Earthquakes (M2.5+, Last 24h)",
+      "description": "Automatically updated GeoJSON feed of recent global seismic activity.",
+      "sourceId": "src-usgs-api",
+      "tags": [
+        "earthquake",
+        "seismic",
+        "global"
+      ]
+    },
+    {
+      "id": "dataset-aftershocks",
+      "title": "Recorded Aftershocks (USGS)",
+      "description": "Recorded aftershocks in Venezuela since June 23, 2026",
+      "sourceId": "src-usgs-api",
+      "tags": [
+        "seismic",
+        "forecast"
+      ]
+    },
+    {
+      "id": "dataset-funvisis-earthquakes",
+      "title": "FUNVISIS Local Earthquakes",
+      "description": "Locally recorded seismic events by the Venezuelan Foundation for Seismological Research",
+      "sourceId": "src-funvisis-maravilla",
+      "tags": [
+        "earthquakes",
+        "local",
+        "funvisis"
+      ]
+    },
+    {
+      "id": "ds-aftershocks",
+      "title": "Aftershocks",
+      "description": "Seismic aftershock events.",
+      "sourceId": "src-aftershocks-placeholder"
+    },
+    {
+      "id": "dataset-hospitals",
+      "title": "OpenStreetMap Hospitals (Venezuela)",
+      "description": "Verified health facilities sourced from OSM Overpass API.",
+      "sourceId": "src-osm-overpass",
+      "tags": [
+        "hospital",
+        "medical",
+        "venezuela"
+      ]
+    },
+    {
+      "id": "ds-shelters",
+      "title": "Shelters",
+      "description": "Emergency shelters available for displaced populations.",
+      "sourceId": "src-shelters-placeholder"
+    },
+    {
+      "id": "ds-collection-centers-chile",
+      "title": "Collection Centers (Chile)",
+      "description": "Donation collection centers located in Chile.",
+      "sourceId": "src-collection-centers-chile-placeholder"
+    },
+    {
+      "id": "ds-road-closures",
+      "title": "Road Closures",
+      "description": "Live status of blocked or damaged roads.",
+      "sourceId": "src-road-closures-placeholder"
+    },
+    {
+      "id": "ds-damage-assessment",
+      "title": "Damage Assessment",
+      "description": "Satellite-derived damage assessment maps.",
+      "sourceId": "src-damage-assessment-placeholder"
+    },
+    {
+      "id": "ds-satellite-imagery",
+      "title": "Satellite Imagery",
+      "description": "High-resolution pre and post event imagery.",
+      "sourceId": "src-satellite-imagery-placeholder"
+    },
+    {
+      "id": "ds-landslides",
+      "title": "Landslides",
+      "description": "Identified landslide zones.",
+      "sourceId": "src-landslides-placeholder"
+    },
+    {
+      "id": "ds-power-outages",
+      "title": "Power Outages",
+      "description": "Reported power grid failures.",
+      "sourceId": "src-power-outages-placeholder"
+    },
+    {
+      "id": "ds-airports",
+      "title": "Airports",
+      "description": "Status of regional airports.",
+      "sourceId": "src-airports-placeholder"
+    },
+    {
+      "id": "ds-ports",
+      "title": "Ports",
+      "description": "Status of maritime ports.",
+      "sourceId": "src-ports-placeholder"
+    },
+    {
+      "id": "ds-volunteer-organizations",
+      "title": "Volunteer Organizations",
+      "description": "Active volunteer groups on the ground.",
+      "sourceId": "src-volunteer-organizations-placeholder"
+    },
+    {
+      "id": "ds-donation-campaigns",
+      "title": "Donation Campaigns",
+      "description": "Verified financial donation campaigns.",
+      "sourceId": "src-donation-campaigns-placeholder"
+    },
+    {
+      "id": "dataset-faults",
+      "title": "GEM Global Active Faults (Venezuela)",
+      "description": "Active tectonic faults in the Venezuela region.",
+      "sourceId": "src-gem-gafdb",
+      "tags": [
+        "fault",
+        "tectonic",
+        "geology"
+      ]
+    },
+    {
+      "id": "ds-usgs-geologic-units",
+      "title": "USGS Geologic Units (Northern Venezuela)",
+      "description": "Geologic polygons from USGS Data Series 199",
+      "sourceId": "src-usgs-ds-199",
+      "tags": [
+        "geology",
+        "lithology",
+        "age"
+      ]
+    },
+    {
+      "id": "ds-satellite-before",
+      "title": "Esri World Imagery (Pre-Event Base)",
+      "description": "High-resolution global satellite basemap (Esri). Acquisition Date: May 1, 2026.",
+      "sourceId": "src-usgs-ds-199",
+      "tags": [
+        "satellite",
+        "optical",
+        "before"
+      ]
+    },
+    {
+      "id": "ds-copernicus-buildings",
+      "title": "Copernicus Damage Grading (Buildings)",
+      "description": "Rapid mapping damage grading for built-up areas (Polygons and Points)",
+      "sourceId": "src-copernicus",
+      "tags": [
+        "damage",
+        "copernicus",
+        "buildings"
+      ]
+    },
+    {
+      "id": "ds-copernicus-roads",
+      "title": "Copernicus Damage Grading (Roads)",
+      "description": "Rapid mapping damage grading for transportation networks",
+      "sourceId": "src-copernicus",
+      "tags": [
+        "damage",
+        "copernicus",
+        "roads"
+      ]
+    },
+    {
+      "id": "ds-copernicus-ground-movement",
+      "title": "Copernicus Ground Movement",
+      "description": "Landslides and earth flow extents",
+      "sourceId": "src-copernicus",
+      "tags": [
+        "damage",
+        "copernicus",
+        "ground-movement"
+      ]
+    },
+    {
+      "id": "ds-nasa-sentinel-damage",
+      "title": "NASA Sentinel-1 Damage Proxy Map",
+      "description": "Likelihood of damaged structures based on Sentinel-1 radar data.",
+      "sourceId": "src-nasa-arcgis",
+      "tags": [
+        "damage",
+        "radar",
+        "sentinel"
+      ]
+    },
+    {
+      "id": "ds-nasa-interferogram",
+      "title": "NASA Sentinel-1 Unwrapped Interferogram",
+      "description": "Continuous line-of-sight ground displacement.",
+      "sourceId": "src-nasa-arcgis",
+      "tags": [
+        "interferogram",
+        "displacement"
+      ]
+    },
+    {
+      "id": "ds-citizen-reports",
+      "title": "Citizen Reports",
+      "description": "Aggregated citizen reports for missing persons and shelters.",
+      "sourceId": "src-citizen-reports",
+      "tags": [
+        "citizens",
+        "humanitarian"
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer-earthquakes",
+      "name": "Recent Earthquakes",
+      "datasetIds": [
+        "ds-earthquakes-recent"
+      ],
+      "format": "geojson",
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Hourly",
+      "enabled": true,
+      "visualization": {
+        "type": "circle",
+        "paint": {
+          "circle-color": "#e74c3c",
+          "circle-radius": [
+            "*",
+            [
+              "get",
+              "mag"
+            ],
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "layer-funvisis",
+      "name": "FUNVISIS Local Earthquakes",
+      "datasetIds": [
+        "dataset-funvisis-earthquakes"
+      ],
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "points",
+        "color": "#3498db"
+      }
+    },
+    {
+      "id": "layer-hospitals",
+      "name": "Hospitals",
+      "datasetIds": [
+        "dataset-hospitals"
+      ],
+      "category": "Infrastructure",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "points",
+        "color": "#2ecc71"
+      }
+    },
+    {
+      "id": "layer-shelters",
+      "name": "Shelters",
+      "datasetIds": [
+        "ds-shelters"
+      ],
+      "category": "Humanitarian",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-collection-centers-chile",
+      "name": "Collection Centers (Chile)",
+      "datasetIds": [
+        "ds-collection-centers-chile"
+      ],
+      "category": "Logistics",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-road-closures",
+      "name": "Road Closures",
+      "datasetIds": [
+        "ds-road-closures"
+      ],
+      "category": "Infrastructure",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-landslides",
+      "name": "Landslides",
+      "datasetIds": [
+        "ds-landslides"
+      ],
+      "category": "Infrastructure",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-power-outages",
+      "name": "Power Outages",
+      "datasetIds": [
+        "ds-power-outages"
+      ],
+      "category": "Infrastructure",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-airports",
+      "name": "Airports",
+      "datasetIds": [
+        "ds-airports"
+      ],
+      "category": "Logistics",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-ports",
+      "name": "Ports",
+      "datasetIds": [
+        "ds-ports"
+      ],
+      "category": "Logistics",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-volunteer-organizations",
+      "name": "Volunteer Organizations",
+      "datasetIds": [
+        "ds-volunteer-organizations"
+      ],
+      "category": "Community",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-donation-campaigns",
+      "name": "Donation Campaigns",
+      "datasetIds": [
+        "ds-donation-campaigns"
+      ],
+      "category": "Humanitarian",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-faults",
+      "name": "Tectonic Faults",
+      "datasetIds": [
+        "dataset-faults"
+      ],
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "line",
+        "color": "#f1c40f"
+      }
+    },
+    {
+      "id": "layer-geologic-units",
+      "name": "USGS Geologic Units",
+      "datasetIds": [
+        "ds-usgs-geologic-units"
+      ],
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "fill",
+        "color": "#95a5a6"
+      }
+    },
+    {
+      "id": "layer-sat-before",
+      "name": "Esri World Imagery (Before)",
+      "datasetIds": [
+        "ds-satellite-before"
+      ],
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "raster",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+      }
+    },
+    {
+      "id": "layer-copernicus-damage",
+      "name": "Copernicus Damage Assessment",
+      "datasetIds": [
+        "ds-copernicus-buildings",
+        "ds-copernicus-roads"
+      ],
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "mixed"
+      }
+    },
+    {
+      "id": "layer-copernicus-ground-movement",
+      "name": "Copernicus Ground Movement",
+      "datasetIds": [
+        "ds-copernicus-ground-movement"
+      ],
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "fill"
+      }
+    },
+    {
+      "id": "layer-nasa-sentinel-damage",
+      "name": "NASA Sentinel Damage Map",
+      "datasetIds": [
+        "ds-nasa-sentinel-damage"
+      ],
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "fill"
+      }
+    },
+    {
+      "id": "layer-nasa-interferogram",
+      "name": "NASA Unwrapped Interferogram",
+      "datasetIds": [
+        "ds-nasa-interferogram"
+      ],
+      "category": "Scientific",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "raster",
+        "url": "https://tiledimageservices7.arcgis.com/WSiUmUhlFx4CtMBB/arcgis/rest/services/202610_sentinel1_unwrappedInterferogram/ImageServer/tile/{z}/{y}/{x}"
+      }
+    },
+    {
+      "id": "layer-citizen-reports",
+      "name": "Citizen Reports (Aggregated)",
+      "datasetIds": [
+        "ds-citizen-reports"
+      ],
+      "category": "Humanitarian",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Hourly",
+      "enabled": false,
+      "visualization": {
+        "type": "mixed"
+      }
+    }
+  ],
+  "providers": [
+    {
+      "id": "prov-venezuelatebusca",
+      "display_name": "Venezuela Te Busca",
+      "website": "https://venezuelatebusca.com/",
+      "description": "Platform for finding missing persons.",
+      "logo": "/logos/venezuelatebusca.png",
+      "status": "active",
+      "adapter": "MockHumanitarianAdapter",
+      "capabilities": [
+        "search",
+        "person_lookup",
+        "submission"
+      ]
+    },
+    {
+      "id": "prov-refugiosvenezuela",
+      "display_name": "Refugios Venezuela",
+      "website": "https://refugiosvenezuela.com/",
+      "description": "Registry of active shelters and their current capacity.",
+      "logo": "/logos/refugiosvenezuela.png",
+      "status": "active",
+      "adapter": "MockHumanitarianAdapter",
+      "capabilities": [
+        "search",
+        "directory",
+        "submission"
+      ]
+    }
+  ]
+}
