@@ -458,7 +458,7 @@
       ],
       "format": "geojson",
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Hourly",
       "enabled": true,
       "visualization": {
@@ -483,7 +483,7 @@
         "dataset-funvisis-earthquakes"
       ],
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Static",
       "enabled": false,
       "visualization": {
@@ -492,13 +492,136 @@
       }
     },
     {
+      "id": "layer-hospitals",
+      "name": "Hospitals",
+      "datasetIds": [
+        "dataset-hospitals"
+      ],
+      "category": "Infrastructure",
+      "confidence": "Verified",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {
+        "type": "points",
+        "color": "#2ecc71"
+      }
+    },
+    {
+      "id": "layer-shelters",
+      "name": "Shelters",
+      "datasetIds": [
+        "ds-shelters"
+      ],
+      "category": "Humanitarian",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-collection-centers-chile",
+      "name": "Collection Centers (Chile)",
+      "datasetIds": [
+        "ds-collection-centers-chile"
+      ],
+      "category": "Logistics",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-road-closures",
+      "name": "Road Closures",
+      "datasetIds": [
+        "ds-road-closures"
+      ],
+      "category": "Infrastructure",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-landslides",
+      "name": "Landslides",
+      "datasetIds": [
+        "ds-landslides"
+      ],
+      "category": "Infrastructure",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-power-outages",
+      "name": "Power Outages",
+      "datasetIds": [
+        "ds-power-outages"
+      ],
+      "category": "Infrastructure",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-airports",
+      "name": "Airports",
+      "datasetIds": [
+        "ds-airports"
+      ],
+      "category": "Logistics",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-ports",
+      "name": "Ports",
+      "datasetIds": [
+        "ds-ports"
+      ],
+      "category": "Logistics",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-volunteer-organizations",
+      "name": "Volunteer Organizations",
+      "datasetIds": [
+        "ds-volunteer-organizations"
+      ],
+      "category": "Community",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
+      "id": "layer-donation-campaigns",
+      "name": "Donation Campaigns",
+      "datasetIds": [
+        "ds-donation-campaigns"
+      ],
+      "category": "Humanitarian",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Static",
+      "enabled": false,
+      "visualization": {}
+    },
+    {
       "id": "layer-faults",
       "name": "Tectonic Faults",
       "datasetIds": [
         "dataset-faults"
       ],
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Static",
       "enabled": false,
       "visualization": {
@@ -513,7 +636,7 @@
         "ds-usgs-geologic-units"
       ],
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Static",
       "enabled": false,
       "visualization": {
@@ -528,7 +651,7 @@
         "ds-satellite-before"
       ],
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Static",
       "enabled": false,
       "visualization": {
@@ -544,7 +667,7 @@
         "ds-copernicus-roads"
       ],
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Static",
       "enabled": false,
       "visualization": {
@@ -558,7 +681,7 @@
         "ds-copernicus-ground-movement"
       ],
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Static",
       "enabled": false,
       "visualization": {
@@ -572,7 +695,7 @@
         "ds-nasa-sentinel-damage"
       ],
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Static",
       "enabled": false,
       "visualization": {
@@ -586,7 +709,7 @@
         "ds-nasa-interferogram"
       ],
       "category": "Scientific",
-      "confidence": "Official",
+      "confidence": "Verified",
       "refreshFrequency": "Static",
       "enabled": false,
       "visualization": {
@@ -595,19 +718,17 @@
       }
     },
     {
-      "id": "layer-verified-buildings",
-      "name": {
-        "en": "Field-Verified Buildings (TerremotoVenezuela)",
-        "es": "Edificios Verificados en Terreno (TerremotoVenezuela)"
-      },
-      "datasetIds": [],
+      "id": "layer-citizen-reports",
+      "name": "Citizen Reports (Aggregated)",
+      "datasetIds": [
+        "ds-citizen-reports"
+      ],
       "category": "Humanitarian",
-      "confidence": "Official",
-      "refreshFrequency": "Real-time",
+      "confidence": "Pending Verification",
+      "refreshFrequency": "Hourly",
       "enabled": false,
       "visualization": {
-        "type": "point",
-        "color": "#f39c12"
+        "type": "mixed"
       }
     }
   ],
@@ -619,7 +740,7 @@
       "description": "Platform for finding missing persons.",
       "logo": "/logos/venezuelatebusca.png",
       "status": "active",
-      "adapter": "VenezuelaTeBuscaAdapter",
+      "adapter": "MockHumanitarianAdapter",
       "capabilities": [
         "search",
         "person_lookup",
@@ -637,19 +758,6 @@
       "capabilities": [
         "search",
         "directory",
-        "submission"
-      ]
-    },
-    {
-      "id": "prov-terremotovenezuela",
-      "display_name": "TerremotoVenezuela",
-      "website": "https://terremotovenezuela.com/",
-      "description": "Official registry of verified damaged buildings.",
-      "logo": "/logos/terremotovenezuela.png",
-      "status": "active",
-      "adapter": "TerremotoVenezuelaAdapter",
-      "capabilities": [
-        "search",
         "submission"
       ]
     }

@@ -8,19 +8,16 @@ const client = new GeoRespondeClient({ baseUrl: '/catalog' });
 export function useCatalog() {
   const [layers, setLayers] = useState<Layer[]>([]);
   const [datasets, setDatasets] = useState<any[]>([]);
-  const [providers, setProviders] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     Promise.all([
       client.getLayers(),
-      client.getDatasets(),
-      client.getProviders()
-    ]).then(([layersData, datasetsData, providersData]) => {
+      client.getDatasets()
+    ]).then(([layersData, datasetsData]) => {
       setLayers(layersData);
       setDatasets(datasetsData);
-      setProviders(providersData);
       setLoading(false);
     }).catch(err => {
       console.error('Failed to load catalog:', err);
@@ -29,5 +26,5 @@ export function useCatalog() {
     });
   }, []);
 
-  return { layers, datasets, providers, loading, error };
+  return { layers, datasets, loading, error };
 }

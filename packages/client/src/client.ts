@@ -1,5 +1,4 @@
 import type { CatalogData, Organization, Source, Dataset, Layer, SearchIndexEntry } from '@georesponde/catalog';
-import type { HumanitarianProvider } from '@georesponde/shared';
 
 export interface ClientOptions {
   baseUrl?: string;
@@ -57,9 +56,5 @@ export class GeoRespondeClient {
   public async getLayer(id: string): Promise<Layer | undefined> {
     const layers = await this.getLayers();
     return layers.find(l => l.id === id);
-  }
-
-  public async getProviders(): Promise<HumanitarianProvider[]> {
-    return this.get<HumanitarianProvider[]>('/providers.json');
   }
 }

@@ -7,6 +7,5 @@ export type {
   Source, 
   Dataset, 
   Layer, 
-  SearchIndexEntry
+  SearchIndexEntry 
 } from '@georesponde/catalog';
-export type { HumanitarianProvider } from '@georesponde/shared';
