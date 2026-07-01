@@ -58,11 +58,24 @@ fastify.get('/api/dev/inspect/venezuelatebusca', async (request, reply) => {
   reply.send(diagnostic)
 })
 
+fastify.get('/', async (request, reply) => {
+  return {
+    service: 'GeoResponde Provider Gateway',
+    version: '0.3.0',
+    status: 'operational'
+  }
+})
+
+fastify.get('/health', async (request, reply) => {
+  return { status: 'ok' }
+})
+
 const start = async () => {
   try {
     await gateway.initialize()
-    await fastify.listen({ port: 3001, host: '0.0.0.0' })
-    console.log('Provider Gateway listening on port 3001')
+    const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001
+    await fastify.listen({ port, host: '0.0.0.0' })
+    console.log(`Provider Gateway listening on port ${port}`)
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)

@@ -16,7 +16,7 @@ export function Find() {
     setLoading(true);
     setHasSearched(true);
     try {
-      const res = await fetch(`http://127.0.0.1:3001/api/search?q=${encodeURIComponent(query)}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:3001'}/api/search?q=${encodeURIComponent(query)}`);
       const data = await res.json();
       setResults(data);
     } catch (err) {

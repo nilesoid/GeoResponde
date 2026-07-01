@@ -12,7 +12,7 @@ export function ProviderStatus() {
   const [providers, setProviders] = useState<Provider[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/providers')
+    fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/providers`)
       .then(res => res.json())
       .then(data => setProviders(data))
       .catch(err => console.error("Failed to load providers", err));

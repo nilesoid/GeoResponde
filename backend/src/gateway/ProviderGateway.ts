@@ -1,18 +1,20 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { HumanitarianProvider, NormalizedSearchResult, SubmissionPackage } from '@georesponde/shared';
 import { BaseAdapter } from '../adapters/BaseAdapter.js';
 import { VenezuelaTeBuscaAdapter } from '../adapters/venezuelatebusca/adapter.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export class ProviderGateway {
   private providers: HumanitarianProvider[] = [];
   private adapters: Map<string, BaseAdapter> = new Map();
 
   async initialize() {
-    // Load from catalog
-    // In production, this would read from the static output public/catalog/providers.json
-    // For this dev environment, we can read it from the public/catalog directory
-    const catalogPath = path.resolve(process.cwd(), '../public/catalog/providers.json');
+    // Resolve relative to the location of this file, reaching the monorepo root
+    const catalogPath = path.resolve(__dirname, '../../../public/catalog/providers.json');
     if (fs.existsSync(catalogPath)) {
       const content = fs.readFileSync(catalogPath, 'utf8');
       this.providers = JSON.parse(content);
