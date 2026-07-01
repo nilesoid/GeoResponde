@@ -1,5 +1,5 @@
 import { BaseAdapter } from '../BaseAdapter.js';
-import { HumanitarianProvider, NormalizedSearchResult, SubmissionPackage } from '@georesponde/shared';
+import { HumanitarianProvider, NormalizedSearchResult, Report, SubmissionResult } from '@georesponde/shared';
 import { fetchRemixSingleFetch } from '../../transports/remix/client.js';
 import { deserializeTurboStream } from '../../transports/remix/deserializer.js';
 import { parseVenezuelaTeBuscaStructural } from './parser.js';
@@ -34,8 +34,7 @@ export class VenezuelaTeBuscaAdapter implements BaseAdapter {
     }
   }
 
-  async submit(pkg: SubmissionPackage): Promise<{ success: boolean; referenceId?: string }> {
-    console.warn(`[VenezuelaTeBuscaAdapter] Submit not implemented for this provider`);
-    return { success: false };
+  async submit(_report: Report): Promise<SubmissionResult> {
+    return { provider: this.provider.id, mode: 'dry-run', status: 'skipped' };
   }
 }

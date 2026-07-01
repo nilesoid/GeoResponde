@@ -1,127 +1,147 @@
 import { useState } from 'react';
+import { validateReport, type Report as ReportModel, type ReportTopic, type SubmissionResult } from '@georesponde/shared';
 import { useTranslation } from 'react-i18next';
-import { BuildingDamageForm } from '../components/Report/BuildingDamageForm';
+import { TopicSelector } from '../components/report/TopicSelector';
+import { ReportFields } from '../components/report/ReportFields';
+import { ConsentGate } from '../components/report/ConsentGate';
+import { ResultPreview } from '../components/report/ResultPreview';
+import { submitReport } from '../lib/report';
 
 export function Report() {
-  const [category, setCategory] = useState<string | null>(null);
   const { t } = useTranslation();
+  const [topic, setTopic] = useState<ReportTopic | null>(null);
+  const [fields, setFields] = useState<Record<string, unknown>>({});
+  const [touched, setTouched] = useState<Set<string>>(new Set());
+  const [acknowledgedAt, setAcknowledgedAt] = useState<string | null>(null);
+  const [result, setResult] = useState<SubmissionResult | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  const categories = [
-    { id: 'missing_person', label: t('report.missingPerson'), providerUrl: 'https://venezuelatebusca.com/reportar' },
-    { id: 'found_person', label: t('report.foundPerson'), providerUrl: 'https://venezuelatebusca.com/reportar' },
-    { id: 'building_damage', label: t('report.damagedBuilding'), providerUrl: 'https://terremotovenezuela.com/' },
-    { id: 'shelter', label: t('report.shelterUpdate'), providerUrl: null },
-  ];
+  const validation = topic ? validateReport(topic, fields) : { ok: false, errors: {} };
+
+  const handleTopicChange = (next: ReportTopic) => {
+    setTopic(next);
+    setFields({});
+    setTouched(new Set());
+    setResult(null);
+  };
+
+  const handleBlur = (name: string) => {
+    setTouched((prev) => (prev.has(name) ? prev : new Set(prev).add(name)));
+  };
+
+  const handleFieldChange = (name: string, value: unknown) => {
+    setFields((prev) => {
+      const next = { ...prev };
+      if (value === undefined || value === '') {
+        delete next[name];
+      } else {
+        next[name] = value;
+      }
+      return next;
+    });
+  };
+
+  const canSubmit = topic !== null && acknowledgedAt !== null && validation.ok && !submitting;
+
+  const handleSubmit = async () => {
+    if (topic === null || acknowledgedAt === null || !validation.ok) return;
+    setSubmitting(true);
+    setResult(null);
+
+    const contact = fields.reporterContact;
+    const report: ReportModel = {
+      id: crypto.randomUUID(),
+      topic,
+      createdAt: new Date().toISOString(),
+      fields,
+      consent: { targets: [], acknowledgedAt },
+      reporter: typeof contact === 'string' && contact ? { contact } : undefined,
+    };
+
+    try {
+      const submissionResult = await submitReport(report);
+      setResult(submissionResult);
+    } catch {
+      // Do not log the report body (sensitive PII). Surface a generic error.
+      setResult({
+        provider: 'dry-run',
+        mode: 'dry-run',
+        status: 'error',
+        error: t('report.result.networkError'),
+      });
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
-    <div style={{ padding: '40px', maxWidth: '800px', margin: '0 auto', flex: 1, overflowY: 'auto', width: '100%', minHeight: 0 }}>
-      <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h1 style={{ color: '#fff', marginBottom: '16px', fontSize: '36px' }}>{t('report.title')}</h1>
-        <p style={{ color: '#aaa', fontSize: '18px', maxWidth: '600px', margin: '0 auto' }}>
-          {t('report.subtitle')}
-        </p>
-      </div>
+    <div
+      style={{
+        padding: '40px 20px',
+        maxWidth: '800px',
+        margin: '0 auto',
+        flex: 1,
+        color: '#e2e8f0',
+        fontFamily: 'system-ui, -apple-system, sans-serif',
+      }}
+    >
+      <header style={{ textAlign: 'center', marginBottom: '40px' }}>
+        <h1 style={{ fontSize: '40px', fontWeight: 'bold', margin: '0 0 10px 0', color: '#f8fafc' }}>
+          {t('report.title')}
+        </h1>
+        <p style={{ fontSize: '18px', color: '#94a3b8', margin: 0 }}>{t('report.subtitle')}</p>
+      </header>
 
-      {!category ? (
-        <div className="report-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
-          {categories.map(c => (
+      <div
+        style={{
+          backgroundColor: '#1e293b',
+          border: '1px solid #334155',
+          borderRadius: '12px',
+          padding: '32px',
+          boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+        }}
+      >
+        <TopicSelector value={topic} onChange={handleTopicChange} />
+
+        {topic && (
+          <>
+            <ReportFields
+              topic={topic}
+              values={fields}
+              onChange={handleFieldChange}
+              errors={validation.errors}
+              touched={touched}
+              onBlur={handleBlur}
+            />
+            <ConsentGate acknowledgedAt={acknowledgedAt} onChange={setAcknowledgedAt} />
             <button
-              key={c.id}
-              onClick={() => setCategory(c.id)}
+              type="button"
+              onClick={handleSubmit}
+              disabled={!canSubmit}
               style={{
-                padding: '32px 24px',
-                backgroundColor: '#1e293b',
-                border: '2px solid #334155',
-                borderRadius: '12px',
-                color: '#fff',
-                fontSize: '20px',
-                fontWeight: 'bold',
-                cursor: 'pointer',
-                textAlign: 'center',
-                transition: 'all 0.2s',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor = '#334155';
-                e.currentTarget.style.borderColor = '#38bdf8';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor = '#1e293b';
-                e.currentTarget.style.borderColor = '#334155';
+                width: '100%',
+                padding: '14px',
+                borderRadius: '10px',
+                border: 'none',
+                backgroundColor: canSubmit ? '#2563eb' : '#334155',
+                color: canSubmit ? '#f8fafc' : '#64748b',
+                fontSize: '16px',
+                fontWeight: 700,
+                cursor: canSubmit ? 'pointer' : 'not-allowed',
               }}
             >
-              {c.label}
+              {submitting ? t('report.submitting') : t('report.submit')}
             </button>
-          ))}
-        </div>
-      ) : (
-        <div>
-          {category === 'building_damage' ? (
-            <BuildingDamageForm onCancel={() => setCategory(null)} />
-          ) : (
-            <>
-              <button 
-                onClick={() => setCategory(null)}
-                style={{ 
-                  background: 'none', 
-                  border: 'none', 
-                  color: '#3498db', 
-                  cursor: 'pointer',
-                  marginBottom: '20px',
-                  fontSize: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px'
-                }}
-              >
-                {t('report.back')}
-              </button>
-              
-              <div style={{ 
-                backgroundColor: '#1e293b', 
-                padding: '40px', 
-                borderRadius: '12px', 
-                border: '1px solid #334155',
-                textAlign: 'center',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
-              }}>
-                {categories.find(c => c.id === category)?.providerUrl ? (
-                  <>
-                    <h2 style={{ color: '#fff', marginTop: 0, fontSize: '28px', marginBottom: '16px' }}>{t('report.redirectTitle')}</h2>
-                    <p style={{ color: '#cbd5e1', marginBottom: '24px', fontSize: '18px', lineHeight: '1.6' }}>
-                      {t('report.redirectText')}
-                    </p>
-                    <a 
-                      href={categories.find(c => c.id === category)?.providerUrl || undefined}
-                      target="_blank"
-                      rel="noreferrer"
-                      style={{
-                        display: 'inline-block',
-                        padding: '16px 40px',
-                        backgroundColor: '#3498db',
-                        color: '#fff',
-                        textDecoration: 'none',
-                        borderRadius: '8px',
-                        fontWeight: 'bold',
-                        fontSize: '20px',
-                        transition: 'background-color 0.2s'
-                      }}
-                      onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2980b9'}
-                      onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#3498db'}
-                    >
-                      {t('report.goToOfficial')}
-                    </a>
-                  </>
-                ) : (
-                  <p style={{ color: '#cbd5e1', marginBottom: 0, fontSize: '18px', lineHeight: '1.6' }}>
-                    {t('report.noProvider', { category: categories.find(c => c.id === category)?.label.toLowerCase() })}
-                  </p>
-                )}
-              </div>
-            </>
-          )}
-        </div>
-      )}
+            {!validation.ok && (
+              <p style={{ fontSize: '13px', color: '#94a3b8', marginTop: '10px', textAlign: 'center' }}>
+                {t('report.errors.formIncomplete')}
+              </p>
+            )}
+          </>
+        )}
+
+        {result && <ResultPreview result={result} />}
+      </div>
     </div>
   );
 }
