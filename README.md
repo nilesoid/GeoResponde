@@ -136,6 +136,23 @@ Our monorepo is built with modern, scalable tools to ensure fast development and
    pnpm dev
    ```
 
+## Deployment Notes
+
+GeoResponde is deployed as:
+
+- Frontend: Vercel
+- Backend: Railway
+
+Although the repository is a pnpm workspace, the frontend is deployed as an independent Vercel project.
+
+To include its workspace dependencies, override the Vercel Build Command with:
+`pnpm --filter @georesponde/frontend... build`
+
+For the complete configuration, see the [Deployment Guide](docs/deployment.md).
+
+---
+
+# Roadmap
 ### Troubleshooting
 
 * **"Module not found" or "ERR_MODULE_NOT_FOUND"**: Run `pnpm -r build` and try again.
