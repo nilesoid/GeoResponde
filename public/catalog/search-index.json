@@ -144,6 +144,12 @@
     "description": "OTHER"
   },
   {
+    "id": "org-juntosve",
+    "title": "JuntosVE",
+    "type": "organization",
+    "description": "NGO"
+  },
+  {
     "id": "prov-venezuela-rescate",
     "title": "Venezuela Rescate",
     "type": "organization",
