@@ -168,6 +168,12 @@
     "description": "NGO"
   },
   {
+    "id": "org-negentropy",
+    "title": "Negentropy Technologies",
+    "type": "organization",
+    "description": "PRIVATE"
+  },
+  {
     "id": "src-usgs-api",
     "title": "USGS Earthquake API (2.5+ M, 1 Day)",
     "type": "source"
@@ -285,6 +291,11 @@
   {
     "id": "src-planet-sourcecoop",
     "title": "Planet Labs PBC via Source Cooperative",
+    "type": "source"
+  },
+  {
+    "id": "src-negentropy",
+    "title": "Negentropy Technologies Gateway API",
     "type": "source"
   },
   {
@@ -450,6 +461,24 @@
     "description": "Aggregated citizen reports for missing persons and shelters."
   },
   {
+    "id": "ds-negentropy-hospitales",
+    "title": "Hospitals (Negentropy)",
+    "type": "dataset",
+    "description": "GeoJSON feed of hospitals and clinics provided by Negentropy Technologies."
+  },
+  {
+    "id": "ds-negentropy-planteles",
+    "title": "Schools & Institutions (Negentropy)",
+    "type": "dataset",
+    "description": "GeoJSON feed of schools and institutions provided by Negentropy Technologies."
+  },
+  {
+    "id": "ds-negentropy-edificaciones",
+    "title": "Building Damage (Negentropy)",
+    "type": "dataset",
+    "description": "GeoJSON feed of verified building damage reports provided by Negentropy Technologies."
+  },
+  {
     "id": "layer-earthquakes",
     "title": "Recent Earthquakes",
     "type": "layer"
@@ -504,6 +533,30 @@
     "title": {
       "en": "Field-Verified Buildings (TerremotoVenezuela)",
       "es": "Edificios Verificados en Terreno (TerremotoVenezuela)"
+    },
+    "type": "layer"
+  },
+  {
+    "id": "layer-negentropy-hospitales",
+    "title": {
+      "en": "Hospitals (Negentropy)",
+      "es": "Hospitales (Negentropy)"
+    },
+    "type": "layer"
+  },
+  {
+    "id": "layer-negentropy-planteles",
+    "title": {
+      "en": "Schools & Institutions (Negentropy)",
+      "es": "Escuelas e Instituciones (Negentropy)"
+    },
+    "type": "layer"
+  },
+  {
+    "id": "layer-negentropy-edificaciones",
+    "title": {
+      "en": "Building Damage (Negentropy)",
+      "es": "Daños en Edificaciones (Negentropy)"
     },
     "type": "layer"
   }

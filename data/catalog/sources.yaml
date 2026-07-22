@@ -111,3 +111,10 @@
   url: https://source.coop/planet/venezuela-earthquake-2026-06-24
   organizationId: org-planet
   license: CC-BY-NC-4.0
+
+- id: src-negentropy
+  name: Negentropy Technologies Gateway API
+  url: https://api.negentropytechnologies.com/v1/terremoto
+  organizationId: org-negentropy
+  license: CC-BY-4.0
+

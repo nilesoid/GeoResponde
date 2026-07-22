@@ -153,5 +153,11 @@
     "name": "Estoy Aquí VE",
     "url": "https://estoyaquive.up.railway.app/",
     "type": "NGO"
+  },
+  {
+    "id": "org-negentropy",
+    "name": "Negentropy Technologies",
+    "type": "PRIVATE",
+    "website": "https://negentropytechnologies.com"
   }
 ]

@@ -154,6 +154,12 @@
       "name": "Estoy Aquí VE",
       "url": "https://estoyaquive.up.railway.app/",
       "type": "NGO"
+    },
+    {
+      "id": "org-negentropy",
+      "name": "Negentropy Technologies",
+      "type": "PRIVATE",
+      "website": "https://negentropytechnologies.com"
     }
   ],
   "sources": [
@@ -306,6 +312,13 @@
       "url": "https://source.coop/planet/venezuela-earthquake-2026-06-24",
       "organizationId": "org-planet",
       "license": "CC-BY-NC-4.0"
+    },
+    {
+      "id": "src-negentropy",
+      "name": "Negentropy Technologies Gateway API",
+      "url": "https://api.negentropytechnologies.com/v1/terremoto",
+      "organizationId": "org-negentropy",
+      "license": "CC-BY-4.0"
     }
   ],
   "datasets": [
@@ -543,6 +556,39 @@
         "citizens",
         "humanitarian"
       ]
+    },
+    {
+      "id": "ds-negentropy-hospitales",
+      "title": "Hospitals (Negentropy)",
+      "description": "GeoJSON feed of hospitals and clinics provided by Negentropy Technologies.",
+      "sourceId": "src-negentropy",
+      "tags": [
+        "hospitals",
+        "humanitarian",
+        "negentropy"
+      ]
+    },
+    {
+      "id": "ds-negentropy-planteles",
+      "title": "Schools & Institutions (Negentropy)",
+      "description": "GeoJSON feed of schools and institutions provided by Negentropy Technologies.",
+      "sourceId": "src-negentropy",
+      "tags": [
+        "schools",
+        "humanitarian",
+        "negentropy"
+      ]
+    },
+    {
+      "id": "ds-negentropy-edificaciones",
+      "title": "Building Damage (Negentropy)",
+      "description": "GeoJSON feed of verified building damage reports provided by Negentropy Technologies.",
+      "sourceId": "src-negentropy",
+      "tags": [
+        "buildings",
+        "damage",
+        "negentropy"
+      ]
     }
   ],
   "layers": [
@@ -757,6 +803,60 @@
       "confidence": "Official",
       "refreshFrequency": "Real-time",
       "enabled": true,
+      "visualization": {
+        "type": "point",
+        "color": "#f39c12"
+      }
+    },
+    {
+      "id": "layer-negentropy-hospitales",
+      "name": {
+        "en": "Hospitals (Negentropy)",
+        "es": "Hospitales (Negentropy)"
+      },
+      "datasetIds": [
+        "ds-negentropy-hospitales"
+      ],
+      "category": "Humanitarian",
+      "confidence": "Official",
+      "refreshFrequency": "Real-time",
+      "enabled": false,
+      "visualization": {
+        "type": "point",
+        "color": "#e74c3c"
+      }
+    },
+    {
+      "id": "layer-negentropy-planteles",
+      "name": {
+        "en": "Schools & Institutions (Negentropy)",
+        "es": "Escuelas e Instituciones (Negentropy)"
+      },
+      "datasetIds": [
+        "ds-negentropy-planteles"
+      ],
+      "category": "Humanitarian",
+      "confidence": "Official",
+      "refreshFrequency": "Real-time",
+      "enabled": false,
+      "visualization": {
+        "type": "point",
+        "color": "#9b59b6"
+      }
+    },
+    {
+      "id": "layer-negentropy-edificaciones",
+      "name": {
+        "en": "Building Damage (Negentropy)",
+        "es": "Daños en Edificaciones (Negentropy)"
+      },
+      "datasetIds": [
+        "ds-negentropy-edificaciones"
+      ],
+      "category": "Humanitarian",
+      "confidence": "Official",
+      "refreshFrequency": "Real-time",
+      "enabled": false,
       "visualization": {
         "type": "point",
         "color": "#f39c12"

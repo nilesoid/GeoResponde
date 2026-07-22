@@ -163,3 +163,46 @@
   visualization:
     type: point
     color: "#f39c12"
+
+- id: layer-negentropy-hospitales
+  name:
+    en: "Hospitals (Negentropy)"
+    es: "Hospitales (Negentropy)"
+  datasetIds:
+    - ds-negentropy-hospitales
+  category: Humanitarian
+  confidence: Official
+  refreshFrequency: Real-time
+  enabled: false
+  visualization:
+    type: point
+    color: "#e74c3c"
+
+- id: layer-negentropy-planteles
+  name:
+    en: "Schools & Institutions (Negentropy)"
+    es: "Escuelas e Instituciones (Negentropy)"
+  datasetIds:
+    - ds-negentropy-planteles
+  category: Humanitarian
+  confidence: Official
+  refreshFrequency: Real-time
+  enabled: false
+  visualization:
+    type: point
+    color: "#9b59b6"
+
+- id: layer-negentropy-edificaciones
+  name:
+    en: "Building Damage (Negentropy)"
+    es: "Daños en Edificaciones (Negentropy)"
+  datasetIds:
+    - ds-negentropy-edificaciones
+  category: Humanitarian
+  confidence: Official
+  refreshFrequency: Real-time
+  enabled: false
+  visualization:
+    type: point
+    color: "#f39c12"
+

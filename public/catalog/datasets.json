@@ -233,5 +233,38 @@
       "citizens",
       "humanitarian"
     ]
+  },
+  {
+    "id": "ds-negentropy-hospitales",
+    "title": "Hospitals (Negentropy)",
+    "description": "GeoJSON feed of hospitals and clinics provided by Negentropy Technologies.",
+    "sourceId": "src-negentropy",
+    "tags": [
+      "hospitals",
+      "humanitarian",
+      "negentropy"
+    ]
+  },
+  {
+    "id": "ds-negentropy-planteles",
+    "title": "Schools & Institutions (Negentropy)",
+    "description": "GeoJSON feed of schools and institutions provided by Negentropy Technologies.",
+    "sourceId": "src-negentropy",
+    "tags": [
+      "schools",
+      "humanitarian",
+      "negentropy"
+    ]
+  },
+  {
+    "id": "ds-negentropy-edificaciones",
+    "title": "Building Damage (Negentropy)",
+    "description": "GeoJSON feed of verified building damage reports provided by Negentropy Technologies.",
+    "sourceId": "src-negentropy",
+    "tags": [
+      "buildings",
+      "damage",
+      "negentropy"
+    ]
   }
 ]
