@@ -14,6 +14,7 @@ import type { EarthquakeFeatureCollection } from '../../lib/earthquakes';
 import { EMPTY_EARTHQUAKES } from '../../lib/earthquakes';
 import type { DamageFeatureCollection } from '../../hooks/useDamageLayer';
 import type { NasaDpmFeatureCollection } from '../../hooks/useNasaDpmLayer';
+import type { NegentropyFeatureCollection } from '../../hooks/useNegentropyLayer';
 import { useRef } from 'react';
 import { API_BASE } from '../../lib/api';
 
@@ -70,6 +71,10 @@ interface Props {
    */
   onViewportBoundsChange?: (bounds: [number, number, number, number]) => void;
   activeLayerVariants?: Record<string, string>;
+  negentropyHospitalesData?: NegentropyFeatureCollection;
+  negentropyPlantelesData?: NegentropyFeatureCollection;
+  negentropyEdificacionesData?: NegentropyFeatureCollection;
+  negentropyAttribution?: string | null;
 }
 
 /** Debounce window for viewport-bounds tracking — coalesces a pan/zoom burst. */
@@ -77,6 +82,7 @@ const VIEWPORT_DEBOUNCE_MS = 300;
 
 const EMPTY_DAMAGE: DamageFeatureCollection = { type: 'FeatureCollection', features: [] };
 const EMPTY_NASA_DPM: NasaDpmFeatureCollection = { type: 'FeatureCollection', features: [] };
+const EMPTY_NEGENTROPY: NegentropyFeatureCollection = { type: 'FeatureCollection', features: [] };
 
 export function MapViewer({
   activeLayerIds,
@@ -105,6 +111,10 @@ export function MapViewer({
   activeLayerVariants = {},
   globalTimeFilter = null,
   eonetVisibleInterval = null,
+  negentropyHospitalesData = EMPTY_NEGENTROPY,
+  negentropyPlantelesData = EMPTY_NEGENTROPY,
+  negentropyEdificacionesData = EMPTY_NEGENTROPY,
+  negentropyAttribution = null,
 }: Props) {
   const { layers } = useCatalog();
   const mapRef = useRef<MapRef>(null);

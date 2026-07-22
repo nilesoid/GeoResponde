@@ -10,6 +10,7 @@ import { useUsgsEarthquakes } from '../hooks/useUsgsEarthquakes';
 import { useFunvisisEarthquakes } from '../hooks/useFunvisisEarthquakes';
 import { useDamageLayer } from '../hooks/useDamageLayer';
 import { useNasaDpmLayer } from '../hooks/useNasaDpmLayer';
+import { useNegentropyLayer } from '../hooks/useNegentropyLayer';
 import { EONET_CATEGORIES } from '../lib/eonet';
 import { AID_SITE_TIPOS } from '../lib/sitios';
 import { presetToWindow, DEFAULT_TIME_PRESET, type TimePreset } from '../lib/timeWindow';
@@ -60,6 +61,11 @@ export function Situation() {
   // NASA ARIA DPM (damaged structures) served live by the gateway route (NASA-02).
   const nasaDpmActive = activeLayerIds.has('layer-nasa-sentinel-damage');
 
+  // Negentropy layers served live by the gateway route
+  const negentropyHospitalesActive = activeLayerIds.has('layer-negentropy-hospitales');
+  const negentropyPlantelesActive = activeLayerIds.has('layer-negentropy-planteles');
+  const negentropyEdificacionesActive = activeLayerIds.has('layer-negentropy-edificaciones');
+
   const { features: eonetFeatures } = useEonetEvents(
     country,
     [...activeCategories],
@@ -84,6 +90,25 @@ export function Situation() {
     loading: nasaDpmLoading,
     source: nasaDpmSource,
   } = useNasaDpmLayer(nasaDpmActive, mapBounds);
+
+  const { collection: negentropyHospitalesData } = useNegentropyLayer(
+    'hospitales',
+    negentropyHospitalesActive,
+    mapBounds,
+  );
+  const { collection: negentropyPlantelesData } = useNegentropyLayer(
+    'planteles',
+    negentropyPlantelesActive,
+    mapBounds,
+  );
+  const {
+    collection: negentropyEdificacionesData,
+    attribution: negentropyAttribution,
+  } = useNegentropyLayer(
+    'edificaciones',
+    negentropyEdificacionesActive,
+    mapBounds,
+  );
 
   const range = React.useMemo(() => {
     let min = Infinity;
@@ -168,7 +193,10 @@ export function Situation() {
           layer.id === GEOFON_LAYER_ID ||
           layer.id === FUNVISIS_LAYER_ID ||
           layer.id === 'layer-copernicus-damage' ||
-          layer.id === 'layer-copernicus-ground-movement'
+          layer.id === 'layer-copernicus-ground-movement' ||
+          layer.id === 'layer-negentropy-hospitales' ||
+          layer.id === 'layer-negentropy-planteles' ||
+          layer.id === 'layer-negentropy-edificaciones'
         )
           continue;
 
@@ -292,6 +320,10 @@ export function Situation() {
         nasaDpmWarming={nasaDpmActive && nasaDpmSource === 'warming'}
         onViewportBoundsChange={setMapBounds}
         activeLayerVariants={activeLayerVariants}
+        negentropyHospitalesData={negentropyHospitalesData}
+        negentropyPlantelesData={negentropyPlantelesData}
+        negentropyEdificacionesData={negentropyEdificacionesData}
+        negentropyAttribution={negentropyAttribution}
       />
       <Sidebar
         activeLayerIds={activeLayerIds}
