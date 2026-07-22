@@ -157,7 +157,7 @@ export function MapViewer({
   const activeLayersWithData = useMemo(() => {
     return layers.filter(l => 
       activeLayerIds.has(l.id) && 
-      (l.id === 'layer-earthquakes' || l.id === 'layer-geofon' || l.id === 'layer-funvisis' || l.id === 'layer-hospitals' || l.id === 'layer-faults' || l.id === 'layer-geologic-units' || l.id === 'layer-satellite' || l.id === 'layer-copernicus-damage' || l.id === 'layer-copernicus-ground-movement' || l.id === 'layer-nasa-sentinel-damage' || l.id === 'layer-nasa-interferogram' || l.id === 'layer-citizen-reports' || l.id === 'layer-verified-buildings')
+      (l.id === 'layer-earthquakes' || l.id === 'layer-geofon' || l.id === 'layer-funvisis' || l.id === 'layer-hospitals' || l.id === 'layer-faults' || l.id === 'layer-geologic-units' || l.id === 'layer-satellite' || l.id === 'layer-copernicus-damage' || l.id === 'layer-copernicus-ground-movement' || l.id === 'layer-nasa-sentinel-damage' || l.id === 'layer-nasa-interferogram' || l.id === 'layer-citizen-reports' || l.id === 'layer-verified-buildings' || l.id === 'layer-negentropy-hospitales' || l.id === 'layer-negentropy-planteles' || l.id === 'layer-negentropy-edificaciones')
     );
   }, [layers, activeLayerIds]);
 
@@ -452,7 +452,14 @@ export function MapViewer({
       const isSymbol = layer.visualization?.type === 'symbol';
       const isCircle = layer.visualization?.type === 'point' || (!isLine && !isFill && !isSymbol);
 
-      const circleRadius = (layer.id === 'layer-hospitals' || layer.id === 'layer-citizen-reports' || layer.id === 'layer-verified-buildings') ? 5 : [
+      const circleRadius = (
+        layer.id === 'layer-hospitals' ||
+        layer.id === 'layer-citizen-reports' ||
+        layer.id === 'layer-verified-buildings' ||
+        layer.id === 'layer-negentropy-hospitales' ||
+        layer.id === 'layer-negentropy-planteles' ||
+        layer.id === 'layer-negentropy-edificaciones'
+      ) ? 5 : [
         'interpolate',
         ['exponential', 2],
         ['coalesce', ['get', 'mag'], 0],
@@ -469,6 +476,9 @@ export function MapViewer({
       const isGeofonLayer = layer.id === 'layer-geofon';
       const isFunvisisLayer = layer.id === 'layer-funvisis';
       const isGroundMovementLayer = layer.id === 'layer-copernicus-ground-movement';
+      const isNegentropyHospitales = layer.id === 'layer-negentropy-hospitales';
+      const isNegentropyPlanteles = layer.id === 'layer-negentropy-planteles';
+      const isNegentropyEdificaciones = layer.id === 'layer-negentropy-edificaciones';
 
       const sourceProps = isNasaLayer
         ? { type: 'geojson' as const, data: nasaDpmData }
@@ -480,7 +490,13 @@ export function MapViewer({
               ? { type: 'geojson' as const, data: funvisisData }
               : isGroundMovementLayer
                 ? { type: 'geojson' as const, data: copernicusGroundMovementData }
-                : { type: 'geojson' as const, data: sourceUrl };
+                : isNegentropyHospitales
+                  ? { type: 'geojson' as const, data: negentropyHospitalesData }
+                  : isNegentropyPlanteles
+                    ? { type: 'geojson' as const, data: negentropyPlantelesData }
+                    : isNegentropyEdificaciones
+                      ? { type: 'geojson' as const, data: negentropyEdificacionesData }
+                      : { type: 'geojson' as const, data: sourceUrl };
 
       const isPlateBoundary = [
         "any",
@@ -648,6 +664,14 @@ export function MapViewer({
                   'total', '#c0392b',
                   'severo', '#e67e22',
                   'parcial', '#f1c40f',
+                  color
+                ] : layer.id === 'layer-negentropy-edificaciones' ? [
+                  'match',
+                  ['get', 'nivel_dano'],
+                  'total', '#c0392b',
+                  'severo', '#e67e22',
+                  'parcial', '#f1c40f',
+                  'leve', '#2ecc71',
                   color
                 ] : color,
                 'circle-radius': circleRadius as any,
