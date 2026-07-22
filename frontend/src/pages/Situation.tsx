@@ -94,15 +94,16 @@ export function Situation() {
     source: nasaDpmSource,
   } = useNasaDpmLayer(nasaDpmActive, mapBounds);
 
+  // We load the Negentropy datasets nationally (omitting the mapBounds viewport boundary tracking)
+  // to ensure point markers are always rendered at all zoom levels (like NASA EONET and Field-Verified Buildings)
+  // and to avoid gateway query failures or empty responses when zoomed out over large bounding boxes.
   const { collection: negentropyHospitalesData } = useNegentropyLayer(
     'hospitales',
     negentropyHospitalesActive,
-    mapBounds,
   );
   const { collection: negentropyPlantelesData } = useNegentropyLayer(
     'planteles',
     negentropyPlantelesActive,
-    mapBounds,
   );
   const {
     collection: negentropyEdificacionesData,
@@ -110,7 +111,6 @@ export function Situation() {
   } = useNegentropyLayer(
     'edificaciones',
     negentropyEdificacionesActive,
-    mapBounds,
   );
 
   const range = React.useMemo(() => {

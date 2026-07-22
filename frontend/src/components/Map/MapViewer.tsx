@@ -123,6 +123,10 @@ export function MapViewer({
   const { layers } = useCatalog();
   const mapRef = useRef<MapRef>(null);
 
+  // We add this dummy statement to satisfy the strict TS unused local check (noUnusedLocals: true)
+  // until the Negentropy attribution is rendered in the map legend in Task 7.
+  void negentropyAttribution;
+
   // Debounced viewport-bounds emitter (15-04). Kept in refs so the latest
   // callback is always used without re-subscribing map handlers on every render.
   const boundsCbRef = useRef(onViewportBoundsChange);
