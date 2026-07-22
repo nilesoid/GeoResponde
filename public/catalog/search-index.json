@@ -300,7 +300,7 @@
   },
   {
     "id": "ds-earthquakes-recent",
-    "title": "Recent Earthquakes (M2.5+, Last 24h)",
+    "title": "USGS Earthquakes (M2.5+, Last 24h)",
     "type": "dataset",
     "description": "Automatically updated GeoJSON feed of recent global seismic activity."
   },
@@ -449,12 +449,6 @@
     "description": "Likelihood of damaged structures based on Sentinel-1 radar data."
   },
   {
-    "id": "ds-nasa-interferogram",
-    "title": "NASA Sentinel-1 Unwrapped Interferogram",
-    "type": "dataset",
-    "description": "Continuous line-of-sight ground displacement."
-  },
-  {
     "id": "ds-citizen-reports",
     "title": "Citizen Reports",
     "type": "dataset",
@@ -480,7 +474,7 @@
   },
   {
     "id": "layer-earthquakes",
-    "title": "Recent Earthquakes",
+    "title": "USGS Earthquakes",
     "type": "layer"
   },
   {
@@ -521,11 +515,6 @@
   {
     "id": "layer-nasa-sentinel-damage",
     "title": "NASA Sentinel Damage Map",
-    "type": "layer"
-  },
-  {
-    "id": "layer-nasa-interferogram",
-    "title": "NASA Unwrapped Interferogram",
     "type": "layer"
   },
   {

@@ -1,7 +1,7 @@
 [
   {
     "id": "ds-earthquakes-recent",
-    "title": "Recent Earthquakes (M2.5+, Last 24h)",
+    "title": "USGS Earthquakes (M2.5+, Last 24h)",
     "description": "Automatically updated GeoJSON feed of recent global seismic activity.",
     "sourceId": "src-usgs-api",
     "tags": [
@@ -212,16 +212,6 @@
       "damage",
       "radar",
       "sentinel"
-    ]
-  },
-  {
-    "id": "ds-nasa-interferogram",
-    "title": "NASA Sentinel-1 Unwrapped Interferogram",
-    "description": "Continuous line-of-sight ground displacement.",
-    "sourceId": "src-nasa-arcgis",
-    "tags": [
-      "interferogram",
-      "displacement"
     ]
   },
   {
