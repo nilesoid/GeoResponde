@@ -706,7 +706,52 @@ export function MapViewer({
         offset={15}
       >
         <div style={{ color: '#0f172a', padding: '4px', fontSize: '13px' }}>
-          {hoverInfo.feature.properties.amenity === 'hospital' ? (
+          {/* Negentropy layers are rendered using layers with ID suffixed with -viz */}
+          {hoverInfo.feature.layer?.id === 'layer-negentropy-hospitales-viz' ? (
+            <>
+              <div style={{ fontWeight: 700, marginBottom: '2px' }}>{hoverInfo.feature.properties.nombre || 'Hospital'}</div>
+              <div style={{ color: '#475569' }}>Tipo: {hoverInfo.feature.properties.tipo || 'Unknown'}</div>
+              {hoverInfo.feature.properties.subtipo && (
+                <div style={{ color: '#475569' }}>Subtipo: {hoverInfo.feature.properties.subtipo}</div>
+              )}
+              {hoverInfo.feature.properties.sector && (
+                <div style={{ color: '#475569' }}>Sector: {hoverInfo.feature.properties.sector}</div>
+              )}
+              {hoverInfo.feature.properties.direccion && (
+                <div style={{ color: '#475569' }}>Dirección: {hoverInfo.feature.properties.direccion}</div>
+              )}
+              <div style={{ color: '#64748b', fontSize: '11px', marginTop: '4px', borderTop: '1px solid #e2e8f0', paddingTop: '4px' }}>
+                Source: {hoverInfo.feature.properties.source}
+              </div>
+            </>
+          ) : hoverInfo.feature.layer?.id === 'layer-negentropy-planteles-viz' ? (
+            <>
+              <div style={{ fontWeight: 700, marginBottom: '2px' }}>{hoverInfo.feature.properties.nombre || 'Plantel'}</div>
+              <div style={{ color: '#475569' }}>Código DEA: {hoverInfo.feature.properties.cod_dea || 'Unknown'}</div>
+              <div style={{ color: '#475569' }}>Dependencia: {hoverInfo.feature.properties.dependencia || 'Unknown'}</div>
+              {hoverInfo.feature.properties.n_estados && (
+                <div style={{ color: '#475569' }}>Estado: {hoverInfo.feature.properties.n_estados}</div>
+              )}
+              <div style={{ color: '#64748b', fontSize: '11px', marginTop: '4px', borderTop: '1px solid #e2e8f0', paddingTop: '4px' }}>
+                Source: {hoverInfo.feature.properties.source}
+              </div>
+            </>
+          ) : hoverInfo.feature.layer?.id === 'layer-negentropy-edificaciones-viz' ? (
+            <>
+              <div style={{ fontWeight: 700, marginBottom: '2px' }}>{hoverInfo.feature.properties.nombre || 'Edificación'}</div>
+              <div style={{ color: '#475569', textTransform: 'capitalize' }}>Daño: {hoverInfo.feature.properties.nivel_dano || 'Unknown'}</div>
+              <div style={{ color: '#475569' }}>Estatus: {hoverInfo.feature.properties.estatus || 'Unknown'}</div>
+              {hoverInfo.feature.properties.notas && (
+                <div style={{ color: '#475569', fontStyle: 'italic', marginTop: '2px' }}>Notas: {hoverInfo.feature.properties.notas}</div>
+              )}
+              {hoverInfo.feature.properties.direccion && (
+                <div style={{ color: '#475569', marginTop: '2px' }}>Dirección: {hoverInfo.feature.properties.direccion}</div>
+              )}
+              <div style={{ color: '#64748b', fontSize: '11px', marginTop: '4px', borderTop: '1px solid #e2e8f0', paddingTop: '4px' }}>
+                Source: {hoverInfo.feature.properties.source}
+              </div>
+            </>
+          ) : hoverInfo.feature.properties.amenity === 'hospital' ? (
             <>
               <div style={{ fontWeight: 700, marginBottom: '2px' }}>{hoverInfo.feature.properties.name || 'Unknown Hospital'}</div>
               <div style={{ color: '#475569' }}>Emergency: {hoverInfo.feature.properties.emergency === 'yes' ? 'Yes' : 'No / Unknown'}</div>
