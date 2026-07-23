@@ -124,7 +124,8 @@
             "negentropyDamageTotal": "Total Damage",
             "negentropyDamageSevere": "Severe Damage",
             "negentropyDamagePartial": "Partial Damage",
-            "negentropyDamageLight": "Light Damage"
+            "negentropyDamageLight": "Light Damage",
+            "sourceAttribution": "Source: {{source}}"
         }
     },
     "find": {

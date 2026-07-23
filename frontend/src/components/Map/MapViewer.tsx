@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Map, { Source, Layer as MapLayer, Popup } from 'react-map-gl';
 import type { MapRef } from 'react-map-gl';
 import maplibregl from 'maplibre-gl';
@@ -120,6 +121,7 @@ export function MapViewer({
   negentropyEdificacionesData = EMPTY_NEGENTROPY,
   negentropyAttribution = null,
 }: Props) {
+  const { t } = useTranslation();
   const { layers } = useCatalog();
   const mapRef = useRef<MapRef>(null);
 
@@ -717,7 +719,7 @@ export function MapViewer({
                 <div style={{ color: '#475569' }}>Dirección: {hoverInfo.feature.properties.direccion}</div>
               )}
               <div style={{ color: '#64748b', fontSize: '11px', marginTop: '4px', borderTop: '1px solid #e2e8f0', paddingTop: '4px' }}>
-                Source: {hoverInfo.feature.properties.source}
+                {t('situation.legend.sourceAttribution', { source: hoverInfo.feature.properties.source })}
               </div>
             </>
           ) : hoverInfo.feature.layer?.id === 'layer-negentropy-planteles-viz' ? (
@@ -729,7 +731,7 @@ export function MapViewer({
                 <div style={{ color: '#475569' }}>Estado: {hoverInfo.feature.properties.n_estados}</div>
               )}
               <div style={{ color: '#64748b', fontSize: '11px', marginTop: '4px', borderTop: '1px solid #e2e8f0', paddingTop: '4px' }}>
-                Source: {hoverInfo.feature.properties.source}
+                {t('situation.legend.sourceAttribution', { source: hoverInfo.feature.properties.source })}
               </div>
             </>
           ) : hoverInfo.feature.layer?.id === 'layer-negentropy-edificaciones-viz' ? (
@@ -744,7 +746,7 @@ export function MapViewer({
                 <div style={{ color: '#475569', marginTop: '2px' }}>Dirección: {hoverInfo.feature.properties.direccion}</div>
               )}
               <div style={{ color: '#64748b', fontSize: '11px', marginTop: '4px', borderTop: '1px solid #e2e8f0', paddingTop: '4px' }}>
-                Source: {hoverInfo.feature.properties.source}
+                {t('situation.legend.sourceAttribution', { source: hoverInfo.feature.properties.source })}
               </div>
             </>
           ) : hoverInfo.feature.properties.amenity === 'hospital' ? (
@@ -752,7 +754,7 @@ export function MapViewer({
               <div style={{ fontWeight: 700, marginBottom: '2px' }}>{hoverInfo.feature.properties.name || 'Unknown Hospital'}</div>
               <div style={{ color: '#475569' }}>Emergency: {hoverInfo.feature.properties.emergency === 'yes' ? 'Yes' : 'No / Unknown'}</div>
               <div style={{ color: '#64748b', fontSize: '11px', marginTop: '4px' }}>
-                Source: {hoverInfo.feature.properties.source}
+                {t('situation.legend.sourceAttribution', { source: hoverInfo.feature.properties.source })}
               </div>
             </>
           ) : hoverInfo.feature.properties.category ? (
@@ -805,7 +807,7 @@ export function MapViewer({
               </div>
               {hoverInfo.feature.properties.source && (
                 <div style={{ color: '#64748b', fontSize: '11px' }}>
-                  Source: {hoverInfo.feature.properties.source}
+                  {t('situation.legend.sourceAttribution', { source: hoverInfo.feature.properties.source })}
                 </div>
               )}
             </>
