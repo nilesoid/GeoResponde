@@ -17,6 +17,8 @@ interface CopernicusLegendProps {
   nasaAttribution?: string | null;
   /** "Experimental — not validated" disclaimer for the DPM layer (ND-06). */
   nasaDisclaimer?: string | null;
+  /** Negentropy Technologies attribution. */
+  negentropyAttribution?: string | null;
 }
 
 export function CopernicusLegend({
@@ -29,6 +31,7 @@ export function CopernicusLegend({
   attribution = null,
   nasaAttribution = null,
   nasaDisclaimer = null,
+  negentropyAttribution = null,
 }: CopernicusLegendProps) {
   const { t } = useTranslation();
   const hasDamage = activeLayerIds.has('layer-copernicus-damage');
@@ -38,6 +41,9 @@ export function CopernicusLegend({
   const hasNasa = activeLayerIds.has('layer-nasa-sentinel-damage');
   const hasFaults = activeLayerIds.has('layer-faults');
   const hasCitizenReports = activeLayerIds.has('layer-citizen-reports');
+  const hasNegentropyHospitals = activeLayerIds.has('layer-negentropy-hospitales');
+  const hasNegentropySchools = activeLayerIds.has('layer-negentropy-planteles');
+  const hasNegentropyDamage = activeLayerIds.has('layer-negentropy-edificaciones');
 
   const eonetCats = EONET_CATEGORIES.filter(
     (id) => !eonetActiveCategories || eonetActiveCategories.has(id),
@@ -57,7 +63,10 @@ export function CopernicusLegend({
     !hasCitizenReports &&
     !hasEonet &&
     !hasSitios &&
-    !hasShakeMap
+    !hasShakeMap &&
+    !hasNegentropyHospitals &&
+    !hasNegentropySchools &&
+    !hasNegentropyDamage
   ) {
     return null;
   }
@@ -204,6 +213,43 @@ export function CopernicusLegend({
         </div>
       )}
 
+      {hasNegentropyHospitals && (
+        <div style={{ marginBottom: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <div style={{ width: '10px', height: '10px', backgroundColor: '#e74c3c', borderRadius: '50%', border: '1px solid #fff' }}></div>
+            <span style={{ fontWeight: 'bold' }}>{t('situation.legend.negentropyHospitals')}</span>
+          </div>
+        </div>
+      )}
+
+      {hasNegentropySchools && (
+        <div style={{ marginBottom: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <div style={{ width: '10px', height: '10px', backgroundColor: '#9b59b6', borderRadius: '50%', border: '1px solid #fff' }}></div>
+            <span style={{ fontWeight: 'bold' }}>{t('situation.legend.negentropySchools')}</span>
+          </div>
+        </div>
+      )}
+
+      {hasNegentropyDamage && (
+        <div style={{ marginBottom: '8px' }}>
+          <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>{t('situation.legend.negentropyDamageTitle')}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+            {[
+              { label: t('situation.legend.negentropyDamageTotal'), color: '#c0392b' },
+              { label: t('situation.legend.negentropyDamageSevere'), color: '#e67e22' },
+              { label: t('situation.legend.negentropyDamagePartial'), color: '#f1c40f' },
+              { label: t('situation.legend.negentropyDamageLight'), color: '#2ecc71' }
+            ].map(item => (
+              <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div style={{ width: '10px', height: '10px', backgroundColor: item.color, borderRadius: '50%', border: '1px solid #fff' }}></div>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {hasShakeMap && (
         <div style={{ marginBottom: '8px' }}>
           <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>USGS ShakeMap (MMI)</div>
@@ -270,6 +316,12 @@ export function CopernicusLegend({
             </div>
           )}
           {nasaAttribution && <div>{nasaAttribution}</div>}
+        </div>
+      )}
+
+      {(hasNegentropyHospitals || hasNegentropySchools || hasNegentropyDamage) && negentropyAttribution && (
+        <div style={{ fontSize: '10px', color: '#888', marginTop: '4px', borderTop: '1px solid #eee', paddingTop: '4px' }}>
+          Source: {negentropyAttribution}
         </div>
       )}
     </div>

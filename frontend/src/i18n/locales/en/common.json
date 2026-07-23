@@ -117,7 +117,14 @@
             "foundPerson": "Found Person",
             "shelter": "Shelter",
             "hospital": "Hospital",
-            "veterinary": "Veterinary"
+            "veterinary": "Veterinary",
+            "negentropyHospitals": "Hospitals (Negentropy)",
+            "negentropySchools": "Schools (Negentropy)",
+            "negentropyDamageTitle": "Building Damage (Negentropy)",
+            "negentropyDamageTotal": "Total Damage",
+            "negentropyDamageSevere": "Severe Damage",
+            "negentropyDamagePartial": "Partial Damage",
+            "negentropyDamageLight": "Light Damage"
         }
     },
     "find": {
