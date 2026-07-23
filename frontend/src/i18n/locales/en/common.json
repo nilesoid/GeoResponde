@@ -59,6 +59,17 @@
                 "landslides": "Landslides"
             }
         },
+        "negentropy": {
+            "layerLabel": "Negentropy Layers",
+            "description": "Live infrastructure status & building damage",
+            "badge": "Real-time",
+            "categoriesLabel": "Sublayers",
+            "categories": {
+                "hospitals": "Hospitals",
+                "schools": "Schools & Institutions",
+                "damage": "Building Damage"
+            }
+        },
         "timeline": {
             "heading": "Time window",
             "advanced": "Advanced data",

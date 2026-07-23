@@ -59,6 +59,17 @@
                 "landslides": "Deslizamientos"
             }
         },
+        "negentropy": {
+            "layerLabel": "Capas Negentropy",
+            "description": "Estado de infraestructura en vivo y daños estructurales",
+            "badge": "Tiempo Real",
+            "categoriesLabel": "Subcapas",
+            "categories": {
+                "hospitals": "Hospitales",
+                "schools": "Escuelas e Instituciones",
+                "damage": "Daño en Edificaciones"
+            }
+        },
         "timeline": {
             "heading": "Ventana temporal",
             "advanced": "Datos avanzados",

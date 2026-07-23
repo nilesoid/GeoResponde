@@ -3,6 +3,9 @@ import { useCatalog } from '../../hooks/useCatalog';
 import { LayerToggle } from './LayerToggle';
 import { UsgsExpandableLayer } from './UsgsExpandableLayer';
 import { useTranslation } from 'react-i18next';
+import { DynamicLayerToggle } from './DynamicLayerToggle';
+import { NegentropyControls } from '../Situation/NegentropyControls';
+import { ShieldCheck } from 'lucide-react';
 
 interface Props {
   activeLayerIds: Set<string>;
@@ -44,7 +47,28 @@ export function Sidebar({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const isNegentropyLayer = (id: string) =>
+    id === 'layer-negentropy-hospitales' ||
+    id === 'layer-negentropy-planteles' ||
+    id === 'layer-negentropy-edificaciones';
 
+  const hasNegentropyHospitals = activeLayerIds.has('layer-negentropy-hospitales');
+  const hasNegentropySchools = activeLayerIds.has('layer-negentropy-planteles');
+  const hasNegentropyDamage = activeLayerIds.has('layer-negentropy-edificaciones');
+
+  const negentropyActive = hasNegentropyHospitals || hasNegentropySchools || hasNegentropyDamage;
+
+  const toggleAllNegentropy = () => {
+    if (negentropyActive) {
+      if (hasNegentropyHospitals) onToggleLayer('layer-negentropy-hospitales');
+      if (hasNegentropySchools) onToggleLayer('layer-negentropy-planteles');
+      if (hasNegentropyDamage) onToggleLayer('layer-negentropy-edificaciones');
+    } else {
+      if (!hasNegentropyHospitals) onToggleLayer('layer-negentropy-hospitales');
+      if (!hasNegentropySchools) onToggleLayer('layer-negentropy-planteles');
+      if (!hasNegentropyDamage) onToggleLayer('layer-negentropy-edificaciones');
+    }
+  };
 
   const toggleCategory = (category: string) => {
     setOpenCategories(prev => {
@@ -169,18 +193,36 @@ export function Sidebar({
                     </div>
                     {openCategories.has(category) && (
                       <div style={{ paddingLeft: '8px' }}>
-                        {categoryLayers.map(layer => (
-                          <LayerToggle 
-                            key={layer.id} 
-                            layer={layer}
-                            dataset={getDatasetForLayer(layer)}
-                            isActive={activeLayerIds.has(layer.id)} 
-                            onToggle={onToggleLayer}
-                            activeVariantId={activeLayerVariants[layer.id]}
-                            onToggleVariant={onToggleLayerVariant}
-                            isUnavailable={unavailableLayerIds.has(layer.id)}
-                          />
-                        ))}
+                        {categoryLayers
+                          .filter((l) => !isNegentropyLayer(l.id))
+                          .map(layer => (
+                            <LayerToggle 
+                              key={layer.id} 
+                              layer={layer}
+                              dataset={getDatasetForLayer(layer)}
+                              isActive={activeLayerIds.has(layer.id)} 
+                              onToggle={onToggleLayer}
+                              activeVariantId={activeLayerVariants[layer.id]}
+                              onToggleVariant={onToggleLayerVariant}
+                              isUnavailable={unavailableLayerIds.has(layer.id)}
+                            />
+                          ))}
+
+                        {category === 'Humanitarian' && (
+                          <DynamicLayerToggle
+                            icon={ShieldCheck}
+                            label={t('situation.negentropy.layerLabel')}
+                            description={t('situation.negentropy.description')}
+                            badge={t('situation.negentropy.badge')}
+                            active={negentropyActive}
+                            onToggle={toggleAllNegentropy}
+                          >
+                            <NegentropyControls
+                              activeLayerIds={activeLayerIds}
+                              onToggleLayer={onToggleLayer}
+                            />
+                          </DynamicLayerToggle>
+                        )}
                       </div>
                     )}
                   </div>
