@@ -109,6 +109,48 @@ export interface NormalizedSearchResult {
 }
 
 /**
+ * An immutable representation of a single humanitarian record coming from one provider.
+ * The Resolution Engine groups observations into Candidate Entities based on generic `identityHints`.
+ */
+export interface Observation {
+  id: string; // Internal id for the observation
+  provider: string; // e.g. "acopio-venezuela-ayuda"
+  providerRecordId: string; // ID from the provider
+  entityType: string; // e.g. "person", "shelter"
+  /** Generic hints for resolution (e.g. { national_id: ["V1234567"] }) */
+  identityHints: Record<string, string[]>;
+  /** The fields as we currently normalize them */
+  normalizedFields: NormalizedSearchResult;
+  rawRecord?: any;
+  sourceUrl?: string;
+  observedAt?: string;
+  updatedAt?: string;
+}
+
+export type ConfidenceLevel = 'LOW' | 'MEDIUM' | 'HIGH';
+
+export interface ObservationEdge {
+  sourceId: string;
+  targetId: string;
+  confidence: number;
+  reasons: string[];
+}
+
+/**
+ * A resolved entity consisting of one or more grouped Observations.
+ */
+export interface CandidateEntity {
+  id: string;
+  entityType: string;
+  confidence: ConfidenceLevel;
+  observations: Observation[];
+  conflicts: any[]; // Detected conflicts between observations
+  explanations?: string[]; // Explainability: why these observations were grouped
+  createdAt: string;
+  updatedAt: string;
+}
+
+/**
  * @deprecated Use `Report`. Kept as an alias so existing imports keep compiling
  * while the codebase migrates to the structured `Report` vocabulary. Convert a
  * legacy package into a `Report` with {@link toReport}.
@@ -574,4 +616,21 @@ export interface EarthquakeFeature {
 export interface EarthquakeFeatureCollection {
   type: 'FeatureCollection';
   features: EarthquakeFeature[];
+}
+
+export interface RankingExplanation {
+  signal: string;
+  scoreContribution: number;
+  explanation: string;
+  debugMetadata?: any;
+}
+
+export interface UnifiedSearchResource {
+  id: string;
+  entityType: string;
+  candidate?: CandidateEntity;
+  result?: NormalizedSearchResult;
+  relevanceScore: number;
+  rankingExplanations: RankingExplanation[];
+  updatedAt?: string;
 }

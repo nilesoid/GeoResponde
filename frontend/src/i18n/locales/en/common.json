@@ -153,7 +153,58 @@
         "openResource": "Open Original Resource ↗",
         "noResults": "No results found for \"{{query}}\". Try a different search term.",
         "error": "Error searching providers",
-        "serviceUnavailable": "The search service is temporarily unavailable. Please try again in a few moments."
+        "serviceUnavailable": "The search service is temporarily unavailable. Please try again in a few moments.",
+        "card": {
+            "highConfidence": "✓ High Confidence (Corroborated)",
+            "conflict": "⚠️ Conflicting statuses detected",
+            "report_one": "report",
+            "report_other": "reports",
+            "showReports": "View {{count}} reports",
+            "hideReports": "Hide reports",
+            "source": "Source: ",
+            "status": "Status: ",
+            "location": "Location: ",
+            "openOriginal": "Open original report",
+            "statusMeta": {
+                "missing": "Missing",
+                "found": "Found",
+                "hospitalized": "Hospitalized",
+                "safe": "Safe",
+                "deceased": "Deceased",
+                "unknown": "Unknown"
+            },
+            "gender": {
+                "male": "Male",
+                "female": "Female",
+                "other": "Other",
+                "unknown": ""
+            },
+            "verified": "Verified",
+            "minor": "Minor",
+            "ageSuffix": "years"
+        },
+        "entityType": {
+            "person": "Person",
+            "shelter": "Shelter",
+            "hospital": "Hospital",
+            "building": "Building",
+            "request": "Request",
+            "medical": "Medical",
+            "rescued": "Rescued",
+            "other": "Other",
+            "unknown": "Unknown"
+        },
+        "signals": {
+            "IntentSignal": "Matches search intent",
+            "RecencySignal": "Recently updated",
+            "ProviderConfidenceSignal": "High provider confidence",
+            "CorroborationSignal": "Supported by {{count}} providers",
+            "ProviderWeightSignal": "High trust source ({{provider}})",
+            "ExactMatchSignal_exact": "Exact match",
+            "ExactMatchSignal_all": "Contains all search terms",
+            "ExactMatchSignal_partial": "Partial match"
+        },
+        "filterAll": "All"
     },
     "report": {
         "underDevelopment": "Federated reporting is under active development. Whether and how a report reaches a provider depends on that provider's capabilities.",

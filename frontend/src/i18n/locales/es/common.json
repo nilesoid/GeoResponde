@@ -153,7 +153,58 @@
         "openResource": "Abrir Recurso Original ↗",
         "noResults": "No se encontraron resultados para \"{{query}}\". Intenta con otro término de búsqueda.",
         "error": "Error buscando proveedores",
-        "serviceUnavailable": "El servicio de búsqueda no está disponible temporalmente. Inténtalo nuevamente en unos minutos."
+        "serviceUnavailable": "El servicio de búsqueda no está disponible temporalmente. Inténtalo nuevamente en unos minutos.",
+        "card": {
+            "highConfidence": "✓ Alta Confianza (Corroborado)",
+            "conflict": "⚠️ Conflicto de estados detectado",
+            "report_one": "reporte",
+            "report_other": "reportes",
+            "showReports": "Ver {{count}} reportes",
+            "hideReports": "Ocultar reportes",
+            "source": "Fuente: ",
+            "status": "Estado: ",
+            "location": "Lugar: ",
+            "openOriginal": "Abrir reporte original",
+            "statusMeta": {
+                "missing": "Desaparecido",
+                "found": "Encontrado",
+                "hospitalized": "Hospitalizado",
+                "safe": "A salvo",
+                "deceased": "Fallecido",
+                "unknown": "Sin estado"
+            },
+            "gender": {
+                "male": "Masculino",
+                "female": "Femenino",
+                "other": "Otro",
+                "unknown": ""
+            },
+            "verified": "Verificado",
+            "minor": "Menor",
+            "ageSuffix": "años"
+        },
+        "entityType": {
+            "person": "Persona",
+            "shelter": "Refugio",
+            "hospital": "Hospital",
+            "building": "Edificio",
+            "request": "Solicitud",
+            "medical": "Médico",
+            "rescued": "Rescatado",
+            "other": "Otro",
+            "unknown": "Desconocido"
+        },
+        "signals": {
+            "IntentSignal": "Coincide con intención de búsqueda",
+            "RecencySignal": "Actualización reciente",
+            "ProviderConfidenceSignal": "Alta confianza del proveedor",
+            "CorroborationSignal": "Respaldado por {{count}} proveedores",
+            "ProviderWeightSignal": "Fuente de alta confianza ({{provider}})",
+            "ExactMatchSignal_exact": "Coincidencia exacta",
+            "ExactMatchSignal_all": "Contiene todos los términos",
+            "ExactMatchSignal_partial": "Coincidencia parcial"
+        },
+        "filterAll": "Todos"
     },
     "report": {
         "underDevelopment": "El reporte federado está en desarrollo activo. Si un reporte llega a un proveedor, y cómo lo hace, depende de las capacidades de ese proveedor.",

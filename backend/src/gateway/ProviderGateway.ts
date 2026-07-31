@@ -5,6 +5,7 @@ import {
   HumanitarianProvider,
   NormalizedSearchResult,
   Report,
+  CandidateEntity,
   SubmissionReport,
   SubmissionResult,
   summarize,
@@ -12,9 +13,9 @@ import {
 import { BaseAdapter, isSubmissionCapable } from '../adapters/BaseAdapter.js';
 import { createAdapter } from '../adapters/registry.js';
 import { isCedula, normalizeCedula } from '../adapters/person.js';
-import { dedupePersons } from './dedupe.js';
+import { resolutionIndex } from '../resolution/ResolutionIndex.js';
 import { submissionCapabilities, type CapabilitiesByTopic } from './capabilities.js';
-import { rankResults } from './ranking.js';
+import { executeSearchPipeline } from '../search/pipeline/searchPipeline.js';
 import { newReportKey, deriveKey, hashKey } from './idempotency.js';
 
 // ESM has no __dirname. Derive it from this module's URL so the catalog path
@@ -51,6 +52,19 @@ export class ProviderGateway {
       const content = fs.readFileSync(catalogPath, 'utf8');
       this.providers = JSON.parse(content);
       
+      if (process.env.NODE_ENV !== 'production') {
+        this.providers.push({
+          id: 'mock-resolution',
+          display_name: 'Mock Resolution Tester',
+          description: 'A local development provider to test the Resolution Index.',
+          website: 'http://localhost',
+          logo: '',
+          status: 'active',
+          adapter: 'MockResolutionAdapter',
+          capabilities: ['search'],
+        });
+      }
+
       for (const p of this.providers) {
         if (p.status !== 'active') continue;
 
@@ -67,7 +81,7 @@ export class ProviderGateway {
     }
   }
 
-  async search(query: string, domain?: string): Promise<NormalizedSearchResult[]> {
+  async search(query: string, domain?: string): Promise<any[]> {
     const searchPromises: Promise<NormalizedSearchResult[]>[] = [];
     
     for (const [id, adapter] of this.adapters.entries()) {
@@ -84,22 +98,9 @@ export class ProviderGateway {
     const resultsArray = await Promise.all(searchPromises);
     const results = resultsArray.flat();
 
-    // Cédula search: when the query is a national ID, providers whose text
-    // search accepts the number return the person; keep only exact cédula
-    // matches (by digits) so the result set is precise. Masked cédulas that
-    // cannot be compared in full are dropped from a cédula search.
-    if (isCedula(query)) {
-      const target = normalizeCedula(query);
-      const matches = results.filter(
-        (r) => r.person?.cedula && normalizeCedula(r.person.cedula) === target,
-      );
-      return rankResults(dedupePersons(matches), query);
-    }
-
-    // Many of these providers aggregate one another, so the same person is
-    // reported by several. Collapse those into one result with provenance, then
-    // order by relevance so the best-matched, best-corroborated results lead.
-    return rankResults(dedupePersons(results), query);
+    // The Search Pipeline now handles intent detection, 
+    // resolution routing, unified ranking, and explainability.
+    return executeSearchPipeline(query, results, this.providers);
   }
 
   /**
